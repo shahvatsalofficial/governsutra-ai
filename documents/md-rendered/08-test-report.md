@@ -1,6 +1,6 @@
 # Test Report
 
-Recorded by `npm run proof` on **2026-11-19T18:07:31.639Z**, Node **v24.15.0**, **win32/x64**, GovernSutra **0.2.0**. Raw output is in [test-results/test-run.tap](test-results/test-run.tap); nothing here is hand-edited.
+Recorded by `npm run proof` on **2026-11-19T19:01:57.220Z**, Node **v24.15.0**, **win32/x64**, GovernSutra **0.2.1**. Raw output is in [test-results/test-run.tap](test-results/test-run.tap); nothing here is hand-edited.
 
 ## Summary
 | Suite | Result |

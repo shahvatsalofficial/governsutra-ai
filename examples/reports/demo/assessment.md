@@ -4,9 +4,9 @@
 
 **System:** Customer Support Knowledge Assistant \(AI-SYS-001\)  
 **Lifecycle:** in-review  
-**Generated:** 2026-11-19T18:05:19.105Z  
+**Generated:** 2026-11-19T18:59:53.222Z  
 **Review scope:** Registry record plus attached evidence references only. No runtime, code or data inspection.  
-**Data cutoff (record last updated):** 2026-11-19T18:05:19.063Z  
+**Data cutoff (record last updated):** 2026-11-19T18:59:53.207Z  
 **Record provenance:** owner-declared  
 **Internal risk indicator:** 42/100 \(moderate\) — risk-model/1.0  
 **Inventory completeness:** 100% \(9/9\)  
@@ -82,6 +82,6 @@ _Unknown inputs are scored 3 of 5 \(mid-scale\) and listed in unknownFactors; th
 - This is an internal engineering review aid. It is not legal advice, a regulatory classification, a compliance determination, a certification or proof of safety.
 
 ---
-GovernSutra AI 0.2.0 · Know the system. Trace the evidence. Keep humans accountable. · created by Vatsal Shah · Apache-2.0
+GovernSutra AI 0.2.1 · Know the system. Trace the evidence. Keep humans accountable. · created by Vatsal Shah · Apache-2.0
 
 _This is an internal engineering review aid. It is not legal advice, a regulatory classification, a compliance determination, a certification or proof of safety._

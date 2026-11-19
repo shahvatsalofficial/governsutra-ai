@@ -1,5 +1,14 @@
 # Changelog
 
+## 0.2.1 — 2026-11-20
+
+### Added
+- Documentation site discovery: canonical and Open Graph tags, schema.org SoftwareApplication JSON-LD, `sitemap.xml`, `robots.txt` and `llms.txt` published with the GitHub Pages site.
+- First npm release path documented and the Release workflow now publishes through npm trusted publishing (OIDC, provenance).
+
+### Changed
+- Version bump only for code: no behavior change to the CLI or core. Proof, sample audit report and docs regenerated for 0.2.1.
+
 ## 0.2.0 — 2026-11-19
 
 First public release. Rebuilt on the 0.1.0 starter after a deep review.

@@ -1,6 +1,6 @@
 # Assurance and Evidence
 
-How to check what GovernSutra 0.2.0 claims, without trusting the author.
+How to check what GovernSutra 0.2.1 claims, without trusting the author.
 
 ## Independent-style audit
 `governsutra audit --out DIR` runs 31 checks and writes a sealed report in JSON, Markdown and HTML. The verdict `ASSURANCE_CHECKS_PASSED_HUMAN_REVIEW_REQUIRED` here means every executed check behaved as specified on this host. It is not an approval. Skipped checks (1) are listed, not counted as passes.

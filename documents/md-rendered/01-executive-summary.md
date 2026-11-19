@@ -1,6 +1,6 @@
 # Executive Summary
 
-**GovernSutra AI** 0.2.0 is an open-source (Apache-2.0), local-first command-line tool that gives organizations an inspectable register of their AI systems and checks it against ten transparent governance rules. Its promise: *Know the system. Trace the evidence. Keep humans accountable.*
+**GovernSutra AI** 0.2.1 is an open-source (Apache-2.0), local-first command-line tool that gives organizations an inspectable register of their AI systems and checks it against ten transparent governance rules. Its promise: *Know the system. Trace the evidence. Keep humans accountable.*
 
 ## The problem
 AI systems spread across repositories, vendors and teams. Owners, intended uses, model and tool versions, data sources and evidence live in scattered documents. Reviews are hard to reproduce, and compliance dashboards often show green badges that nothing supports.
@@ -16,7 +16,7 @@ AI systems spread across repositories, vendors and teams. Owners, intended uses,
 - **Portable skills:** 20 agent role files, 26 `SKILL.md` skills, 8 workflows, adapters for 9 AI IDEs.
 
 ## Why you can trust the numbers
-- 80 automated tests: 80 passed, 0 failed, 0 skipped (Node v24.15.0, win32/x64, recorded 2026-11-19T18:07:31.639Z).
+- 80 automated tests: 80 passed, 0 failed, 0 skipped (Node v24.15.0, win32/x64, recorded 2026-11-19T19:01:57.220Z).
 - 31 assurance checks run on hostile inputs; 30 passed, 1 skipped, 0 failed.
 - 3500 fuzzed inputs; 0 unexpected crashes or invariant violations.
 - Raw logs, transcripts and SHA-256 sums are published in `test-results/` and `samples/`.

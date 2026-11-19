@@ -1,8 +1,8 @@
-$ governsutra audit verify --root C:\Users\VATSAL~1\AppData\Local\Temp\govsut-proof-RoBQtU
+$ governsutra audit verify --root C:\Users\VATSAL~1\AppData\Local\Temp\govsut-proof-VSmqX5
 {
   "valid": true,
   "eventCount": 2,
-  "headHash": "ee187ad7e8fa83adc9768c79f92edfd58eb796af904c28d6f9a79be9f37f89b6",
+  "headHash": "600ef57f08ee431793c86d12a4c87a66118c37890f9fea8c4baf3ba83827cb0a",
   "issues": [],
   "limitation": "Hash chaining detects accidental or partial tampering; an administrator able to rewrite the entire log can recompute it. This is not a digital signature or immutable WORM storage."
 }

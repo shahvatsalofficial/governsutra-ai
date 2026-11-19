@@ -2,9 +2,9 @@
 
 > **Decision:** `ASSURANCE_CHECKS_PASSED_HUMAN_REVIEW_REQUIRED` — ASSURANCE\_CHECKS\_PASSED\_HUMAN\_REVIEW\_REQUIRED means every executed check behaved as specified. It is never an approval, certification or compliance statement. Any failed check gives ASSURANCE\_CHECKS\_FAILED. Skipped checks are listed, not counted as passes.
 
-**Tool:** GovernSutra AI 0.2.0  
-**Integrity:** SHA-256 seal verified \(59dc1e3230b5fa7c…\)  
-**Recorded:** 2026-11-19T18:07:31.603Z  
+**Tool:** GovernSutra AI 0.2.1  
+**Integrity:** SHA-256 seal verified \(3649fb91e69440c2…\)  
+**Recorded:** 2026-11-19T19:01:57.211Z  
 **Environment:** Node v24.15.0 · win32/x64  
 **Assurance checks:** 30 passed · 0 failed · 1 skipped of 31  
 **Inventory:** agents: 20 · skills: 26 · rules: 10 · workflows: 8 · hostAdapters: 9 · runtimeDependencies: 0  
@@ -40,7 +40,7 @@
 | A24 | Imported manifest never overwrites an existing system | skipped, not replaced | imported=0 skipped=1 | pass |
 | A25 | Lockfile yields the exact resolved version with a JSON pointer | version 4.2.1 + pointer | 4.2.1 /packages/node\_modules\~1openai | pass |
 | A26 | Model version change triggers re-review | model-change-review trigger | 1 change, triggers=model-change-review | pass |
-| A27 | Host adapter install refuses to overwrite without --force | refusal then success | Refusing to overwrite C:\\Users\\VATSAL\~1\\AppData\\Local\\Temp\\govsut-audit-ide-DepH4v\\.cursor\\rules\\governsutra.mdc \(+71 more\); pass --force af | pass |
+| A27 | Host adapter install refuses to overwrite without --force | refusal then success | Refusing to overwrite C:\\Users\\VATSAL\~1\\AppData\\Local\\Temp\\govsut-audit-ide-19QxFA\\.cursor\\rules\\governsutra.mdc \(+71 more\); pass --force af | pass |
 | A28 | Host name path traversal is refused | Unsupported host adapter | Unsupported host adapter. See docs/IDE\_COMPATIBILITY.md | pass |
 | A29 | Sealed report detects later edits | verifySeal false after edit | intact=true, afterEdit=false | pass |
 | A30 | Shipped inventory matches claims \(20 agents, 26 skills, 10 rules, 8 workflows\) | counts equal | agents=20 skills=26 rules=10 workflows=8 | pass |
@@ -80,6 +80,6 @@ _A SHA-256 seal detects change; it is not a signature and does not prove who pro
 _This is an internal engineering review aid. It is not legal advice, a regulatory classification, a compliance determination, a certification or proof of safety._
 
 ---
-GovernSutra AI 0.2.0 · Know the system. Trace the evidence. Keep humans accountable. · created by Vatsal Shah · Apache-2.0
+GovernSutra AI 0.2.1 · Know the system. Trace the evidence. Keep humans accountable. · created by Vatsal Shah · Apache-2.0
 
 _This is an internal engineering review aid. It is not legal advice, a regulatory classification, a compliance determination, a certification or proof of safety._

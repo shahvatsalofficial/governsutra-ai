@@ -1,6 +1,6 @@
-$ governsutra scan --root C:\Users\VATSAL~1\AppData\Local\Temp\govsut-proof-RoBQtU --repo E:\Ai-Agents\GovernSutra-AI\fixtures\sample-repo
+$ governsutra scan --root C:\Users\VATSAL~1\AppData\Local\Temp\govsut-proof-VSmqX5 --repo E:\Ai-Agents\GovernSutra-AI\fixtures\sample-repo
 {
-  "saved": "C:\\Users\\VATSAL~1\\AppData\\Local\\Temp\\govsut-proof-RoBQtU\\.governsutra\\scans\\latest.json",
+  "saved": "C:\\Users\\VATSAL~1\\AppData\\Local\\Temp\\govsut-proof-VSmqX5\\.governsutra\\scans\\latest.json",
   "candidates": 4,
   "manifests": 1,
   "notes": [

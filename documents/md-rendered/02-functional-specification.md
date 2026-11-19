@@ -1,6 +1,6 @@
 # Functional Specification
 
-What GovernSutra 0.2.0 does, per capability. Each row names the command and the proof.
+What GovernSutra 0.2.1 does, per capability. Each row names the command and the proof.
 
 ## Capabilities
 | ID | Capability | Command | Behavior |

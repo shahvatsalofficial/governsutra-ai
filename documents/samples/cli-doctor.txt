@@ -1,11 +1,11 @@
-$ governsutra doctor --root C:\Users\VATSAL~1\AppData\Local\Temp\govsut-proof-RoBQtU
+$ governsutra doctor --root C:\Users\VATSAL~1\AppData\Local\Temp\govsut-proof-VSmqX5
 {
-  "tool": "governsutra-ai 0.2.0",
+  "tool": "governsutra-ai 0.2.1",
   "node": "v24.15.0",
   "minimum": "v22",
   "nodeSupported": true,
   "platform": "win32",
-  "workspace": "C:\\Users\\VATSAL~1\\AppData\\Local\\Temp\\govsut-proof-RoBQtU",
+  "workspace": "C:\\Users\\VATSAL~1\\AppData\\Local\\Temp\\govsut-proof-VSmqX5",
   "workspaceExists": false,
   "hostAdapters": [
     "claude",
