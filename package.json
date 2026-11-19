@@ -1,0 +1,95 @@
+{
+  "name": "governsutra-ai",
+  "version": "0.2.0",
+  "private": false,
+  "type": "module",
+  "description": "GovernSutra AI: local-first AI system governance registry, evidence and risk intelligence CLI. Tracks AI systems, models, tools, MCP servers and data sources; evaluates 10 transparent rules; hash-chained audit log; JSON/Markdown/HTML audit reports; 20 agent roles and 26 portable skills. Zero dependencies, no API keys.",
+  "author": {
+    "name": "Vatsal Shah",
+    "url": "https://github.com/shahvatsalofficial"
+  },
+  "license": "Apache-2.0",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "test": "node scripts/run-tests.mjs",
+    "doctor": "node packages/cli/index.mjs doctor",
+    "demo": "node scripts/demo.mjs",
+    "scan": "node packages/cli/index.mjs scan",
+    "start": "node packages/cli/index.mjs serve",
+    "audit": "node packages/cli/index.mjs audit --out examples/audit --force",
+    "proof": "node scripts/proof.mjs",
+    "docs:build": "node documents/build.mjs",
+    "pack:check": "npm pack --dry-run"
+  },
+  "bin": {
+    "governsutra": "packages/cli/index.mjs",
+    "governsutra-ai": "packages/cli/index.mjs"
+  },
+  "homepage": "https://shahvatsalofficial.github.io/governsutra-ai/",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shahvatsalofficial/governsutra-ai.git"
+  },
+  "bugs": {
+    "url": "https://github.com/shahvatsalofficial/governsutra-ai/issues"
+  },
+  "keywords": [
+    "ai-governance",
+    "ai-risk",
+    "ai-inventory",
+    "ai-bom",
+    "model-governance",
+    "mcp",
+    "audit-trail",
+    "evidence",
+    "nist-ai-rmf",
+    "iso-42001",
+    "eu-ai-act",
+    "responsible-ai",
+    "agent-skills",
+    "claude-code",
+    "cursor",
+    "codex",
+    "github-copilot",
+    "gemini-cli",
+    "cli",
+    "offline",
+    "local-first",
+    "zero-dependencies",
+    "human-oversight",
+    "risk-register"
+  ],
+  "files": [
+    "packages",
+    "skills",
+    "agents",
+    ".claude/agents",
+    "adapters",
+    "fixtures",
+    "schemas",
+    "rules",
+    "workflows",
+    "plugins",
+    "docs",
+    "examples",
+    "scripts/install.sh",
+    "scripts/install.ps1",
+    "scripts/install.cmd",
+    "scripts/demo.mjs",
+    "README.md",
+    "LICENSE",
+    "NOTICE",
+    "CHANGELOG.md",
+    "SECURITY.md",
+    "AGENTS.md",
+    "CLAUDE.md",
+    "GEMINI.md",
+    "llms.txt"
+  ],
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  }
+}

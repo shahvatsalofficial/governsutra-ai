@@ -1,0 +1,12 @@
+$ governsutra install-ide --host cursor --target C:\Users\VATSAL~1\AppData\Local\Temp\govsut-proof-RoBQtU\ide --dry-run
+{
+  "host": "cursor",
+  "target": "C:\\Users\\VATSAL~1\\AppData\\Local\\Temp\\govsut-proof-RoBQtU\\ide",
+  "portableAssets": "C:\\Users\\VATSAL~1\\AppData\\Local\\Temp\\govsut-proof-RoBQtU\\ide\\governsutra",
+  "files": 72,
+  "overwrites": false,
+  "dryRun": true,
+  "note": "Project-local host instructions plus shared agents, skills, rules, workflows, schemas and master prompt. Native runtime behavior still depends on the host and its version."
+}
+
+[exit 0]

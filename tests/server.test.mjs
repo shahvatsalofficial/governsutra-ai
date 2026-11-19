@@ -1,0 +1,8 @@
+import test,{before,after} from 'node:test';import assert from 'node:assert/strict';import fs from 'node:fs';import os from 'node:os';import path from 'node:path';
+import {ensureWorkspace,registerSystem} from '../packages/core/index.mjs';import {createGovernanceServer} from '../packages/server/index.mjs';import sample from '../fixtures/sample-system.json' with {type:'json'};
+const root=fs.mkdtempSync(path.join(os.tmpdir(),'govsut-server-'));ensureWorkspace(root);registerSystem(root,{...sample,id:'AI-SYS-201'});const token='a'.repeat(32);const server=createGovernanceServer({root,token});let port;
+before(async()=>{await new Promise(r=>server.listen(0,'127.0.0.1',r));port=server.address().port;});
+after(async()=>{await new Promise(r=>server.close(r));fs.rmSync(root,{recursive:true,force:true});});
+test('server health requires bearer token',async()=>{let x=await fetch(`http://127.0.0.1:${port}/health`);assert.equal(x.status,401);x=await fetch(`http://127.0.0.1:${port}/health`,{headers:{Authorization:`Bearer ${token}`}});assert.equal(x.status,200);assert.equal((await x.json()).ok,true);});
+test('server exposes read-only system assessment',async()=>{const x=await fetch(`http://127.0.0.1:${port}/systems/AI-SYS-201`,{headers:{Authorization:`Bearer ${token}`}});assert.equal(x.status,200);assert.equal((await x.json()).systemId,'AI-SYS-201');});
+test('server rejects writes and origins',async()=>{let x=await fetch(`http://127.0.0.1:${port}/systems`,{method:'POST',headers:{Authorization:`Bearer ${token}`}});assert.equal(x.status,405);x=await fetch(`http://127.0.0.1:${port}/health`,{headers:{Authorization:`Bearer ${token}`,Origin:'https://evil.example'}});assert.equal(x.status,403);});

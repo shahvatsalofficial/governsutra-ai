@@ -1,0 +1,12 @@
+{
+  "name": "governsutra-ai",
+  "version": "0.2.0",
+  "description": "Evidence-linked AI system governance engineering skills and specialist agent instructions",
+  "author": {
+    "name": "Vatsal Shah",
+    "url": "https://github.com/shahvatsalofficial"
+  },
+  "license": "Apache-2.0",
+  "homepage": "https://shahvatsalofficial.github.io/governsutra-ai/",
+  "repository": "https://github.com/shahvatsalofficial/governsutra-ai"
+}

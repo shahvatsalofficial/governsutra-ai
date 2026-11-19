@@ -1,0 +1,15 @@
+{
+  "schema": "governsutra.fuzz.v1",
+  "seed": 20261119,
+  "systemCases": 3000,
+  "validated": 306,
+  "rejected": 2694,
+  "evaluated": 306,
+  "unexpectedExceptions": 0,
+  "invariantViolations": 0,
+  "scanCases": 300,
+  "scanUnexpected": 0,
+  "notes": [],
+  "rendererCases": 200,
+  "rendererEscapeFailures": 0
+}

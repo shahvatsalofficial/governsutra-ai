@@ -1,0 +1,196 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://shahvatsalofficial.github.io/governsutra-ai/schemas/system.schema.json",
+  "title": "GovernSutra AI System Record",
+  "type": "object",
+  "required": [
+    "id",
+    "name",
+    "intendedUse",
+    "owner",
+    "riskOwner"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9._-]{1,79}$"
+    },
+    "name": {
+      "type": "string",
+      "minLength": 1
+    },
+    "intendedUse": {
+      "type": "string",
+      "minLength": 1
+    },
+    "owner": {
+      "type": "string"
+    },
+    "riskOwner": {
+      "type": "string"
+    },
+    "lifecycle": {
+      "enum": [
+        "draft",
+        "in-review",
+        "active",
+        "suspended",
+        "retired"
+      ]
+    },
+    "models": {
+      "type": "array"
+    },
+    "tools": {
+      "type": "array"
+    },
+    "dataSources": {
+      "type": "array"
+    },
+    "humanCheckpoints": {
+      "type": "array"
+    },
+    "prohibitedUses": {
+      "type": "array"
+    },
+    "controls": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "status": {
+            "enum": [
+              "planned",
+              "implemented",
+              "evidence-attached",
+              "verified-by-named-reviewer",
+              "failed",
+              "unknown",
+              "not-applicable",
+              "exception-approved"
+            ]
+          },
+          "evidenceIds": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "verifier": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "risk": {
+      "type": "object"
+    },
+    "schemaVersion": {
+      "type": "string"
+    },
+    "nextReviewAt": {
+      "type": "string",
+      "description": "ISO date of the next human review"
+    },
+    "prompts": {
+      "type": "array",
+      "description": "Prompt or policy artifact references (name, version, sha256). Never raw private prompts.",
+      "items": {
+        "type": "object"
+      }
+    },
+    "exceptions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "ruleId",
+          "rationale",
+          "scope",
+          "approver",
+          "expiresAt"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "ruleId": {
+            "type": "string",
+            "pattern": "^GOV-\\d{3}$"
+          },
+          "rationale": {
+            "type": "string",
+            "minLength": 1
+          },
+          "scope": {
+            "type": "string",
+            "minLength": 1
+          },
+          "approver": {
+            "type": "object",
+            "required": [
+              "name",
+              "type"
+            ],
+            "properties": {
+              "name": {
+                "type": "string",
+                "minLength": 1
+              },
+              "type": {
+                "const": "human"
+              }
+            }
+          },
+          "expiresAt": {
+            "type": "string"
+          },
+          "compensatingControls": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "provenance": {
+      "type": "object",
+      "properties": {
+        "kind": {
+          "enum": [
+            "owner-declared",
+            "repository-manifest"
+          ]
+        },
+        "path": {
+          "type": "string"
+        },
+        "sha256": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        },
+        "confirmedByOwner": {
+          "type": "boolean"
+        }
+      }
+    },
+    "integrity": {
+      "type": "object",
+      "description": "Optional manifest digest: sha256 of canonical JSON (sorted keys) without this field. Detects edits; not a signature.",
+      "properties": {
+        "sha256": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        }
+      }
+    }
+  }
+}

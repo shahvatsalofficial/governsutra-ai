@@ -1,0 +1,52 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Governance Finding",
+  "type": "object",
+  "required": [
+    "id",
+    "severity",
+    "status",
+    "claim",
+    "evidence",
+    "confidence",
+    "limitations",
+    "recommendedOwnerAction"
+  ],
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "severity": {
+      "enum": [
+        "low",
+        "medium",
+        "high",
+        "critical",
+        "block"
+      ]
+    },
+    "status": {
+      "enum": [
+        "pass",
+        "fail",
+        "unknown",
+        "not-applicable"
+      ]
+    },
+    "claim": {
+      "type": "string"
+    },
+    "evidence": {
+      "type": "array"
+    },
+    "confidence": {
+      "type": "string"
+    },
+    "limitations": {
+      "type": "string"
+    },
+    "recommendedOwnerAction": {
+      "type": "string"
+    }
+  }
+}

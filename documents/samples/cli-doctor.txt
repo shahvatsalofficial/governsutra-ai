@@ -1,0 +1,26 @@
+$ governsutra doctor --root C:\Users\VATSAL~1\AppData\Local\Temp\govsut-proof-RoBQtU
+{
+  "tool": "governsutra-ai 0.2.0",
+  "node": "v24.15.0",
+  "minimum": "v22",
+  "nodeSupported": true,
+  "platform": "win32",
+  "workspace": "C:\\Users\\VATSAL~1\\AppData\\Local\\Temp\\govsut-proof-RoBQtU",
+  "workspaceExists": false,
+  "hostAdapters": [
+    "claude",
+    "cline",
+    "codex",
+    "continue",
+    "copilot",
+    "cursor",
+    "gemini",
+    "roo",
+    "windsurf"
+  ],
+  "offlineCore": true,
+  "runtimeDependencies": 0,
+  "networkCalls": "none (serve binds 127.0.0.1 only)"
+}
+
+[exit 0]

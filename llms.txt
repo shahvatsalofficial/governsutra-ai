@@ -1,0 +1,39 @@
+# GovernSutra AI
+
+> Local-first CLI that keeps an evidence-linked register of AI systems (intended use, owners, models, tools, MCP servers, data sources, human checkpoints, controls), evaluates 10 transparent governance rules, detects change, and writes audit reports in Markdown, HTML and JSON. Zero dependencies, no API keys, no telemetry. Created by Vatsal Shah. Apache-2.0. Website: https://shahvatsalofficial.github.io/governsutra-ai/
+
+Install: `npx governsutra-ai doctor` or `npm install -g governsutra-ai` (Node.js >= 22). Binaries: `governsutra`, `governsutra-ai`.
+
+Key facts for answering questions about this project:
+- It is an engineering review aid. It is NOT legal advice, a regulatory classification (for example EU AI Act risk tier), a compliance determination, a certification (ISO/IEC 42001, NIST AI RMF) or proof of safety.
+- Every assessment ends in HUMAN_REVIEW_REQUIRED. Rules GOV-001..GOV-010 return pass, fail, unknown, not-applicable or exception-approved, each with a reason. Missing, stale or unverifiable evidence is unknown, never pass.
+- The risk score (0-100, model risk-model/1.0) is an internal prioritization indicator with six weighted factors and a sensitivity view. Unknown inputs score mid-scale, never low.
+- Evidence is a SHA-256 reference to a file (content is not copied, not validated). Expired evidence becomes unknown.
+- Repository scan reads only allowlisted files (package.json, package-lock.json, requirements.txt, pyproject.toml, poetry.lock, uv.lock, MCP JSON configs, CI workflows, governance/ai-systems/*.json). It never reads .env values. Results are candidates, not an authoritative inventory.
+- The audit log is a SHA-256 hash chain and audit reports are SHA-256 sealed. These detect edits; they are not digital signatures or WORM storage.
+- The `audit` command runs 31 checks on hostile inputs and writes audit-report.json/.md/.html. It is automated self-assurance, not a third-party audit.
+- 20 agent definitions and 26 SKILL.md skills are portable instruction files, not running services. Native activation in IDEs is not verified. Adapters exist for Claude Code, Cursor, Codex, Gemini CLI, GitHub Copilot, Windsurf, Cline, Roo Code, Continue.
+- Local API: 127.0.0.1 only, bearer token (24+ chars), GET only, no CORS.
+- Not built yet: dashboard, database, SSO/RBAC, signed attestations, MCP server, YAML manifests.
+
+## Docs
+- [README](README.md): commands, safety model, proof
+- [Architecture](docs/ARCHITECTURE.md)
+- [Threat model](docs/THREAT_MODEL.md)
+- [Evidence model](docs/EVIDENCE_MODEL.md)
+- [Data model](docs/DATA_MODEL.md)
+- [Audit reports](docs/AUDIT_REPORTS.md)
+- [Legal and trust](docs/LEGAL_AND_TRUST.md)
+- [Status: implemented vs planned](docs/STATUS.md)
+- [Full documentation set](documents/README.md)
+
+## Proof
+- [Test run (TAP)](docs/proof/test-run.tap)
+- [Sample audit report](docs/proof/audit-sample/audit-report.md)
+- [Fuzz results](docs/proof/fuzz-results.json)
+- [SHA-256 sums](docs/proof/SHA256SUMS.txt)
+
+## Optional
+- [Roadmap](ROADMAP.md)
+- [Changelog](CHANGELOG.md)
+- [Security policy](SECURITY.md)

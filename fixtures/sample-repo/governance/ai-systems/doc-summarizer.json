@@ -1,0 +1,72 @@
+{
+  "id": "AI-SYS-002",
+  "name": "Internal Document Summarizer (fixture)",
+  "description": "Internal support assistant that retrieves approved knowledge articles and drafts responses for staff review.",
+  "intendedUse": "Summarize internal policy documents for staff; staff verify summaries before use.",
+  "prohibitedUses": [
+    "Autonomously issue refunds or change account state",
+    "Make employment, credit, medical or legal decisions",
+    "Expose customer data to unapproved providers"
+  ],
+  "owner": "Knowledge Management Lead",
+  "riskOwner": "Head of Operations",
+  "lifecycle": "in-review",
+  "businessUnit": "Customer Operations",
+  "deploymentContext": {
+    "environment": "staging",
+    "regions": [
+      "ap-south-1"
+    ],
+    "exposure": "internal"
+  },
+  "models": [
+    {
+      "provider": "Example Model Provider",
+      "name": "Support-LLM",
+      "version": "2026-10-15",
+      "deployment": "hosted-api",
+      "provenance": "vendor release note URL to be verified by owner"
+    }
+  ],
+  "tools": [],
+  "dataSources": [
+    {
+      "name": "Approved knowledge base",
+      "category": "internal-business-content",
+      "origin": "company-managed",
+      "sensitivity": "internal",
+      "retention": "source-system policy",
+      "rawDataAttached": false
+    }
+  ],
+  "affectedPeople": [
+    "support staff",
+    "customers receiving staff-reviewed answers"
+  ],
+  "humanCheckpoints": [
+    {
+      "stage": "before-send",
+      "role": "support agent",
+      "authority": "edit, reject or escalate",
+      "evidence": "ticket review event"
+    }
+  ],
+  "controls": [],
+  "risk": {
+    "decisionImpact": 3,
+    "autonomy": "assist",
+    "dataSensitivity": "internal",
+    "exposure": "internal",
+    "modelOpacity": 3,
+    "humanOversight": "documented"
+  },
+  "nextReviewAt": "2027-02-17",
+  "tags": [
+    "RAG",
+    "customer-support",
+    "human-in-the-loop"
+  ],
+  "integrity": {
+    "sha256": "fb167a4b9c95bb763412e897e9c9d4ad6fd55441b6fedaab82b3433633f426b6"
+  }
+}

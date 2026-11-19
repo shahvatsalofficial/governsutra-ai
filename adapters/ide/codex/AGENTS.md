@@ -1,0 +1,1 @@
+Follow `governsutra/AGENTS.md` as the authoritative portable governance instructions. Use `governsutra/skills/`, `governsutra/agents/`, `governsutra/rules/` and `governsutra/workflows/` for specialist guidance. Preserve evidence provenance, privacy and human accountability. Do not claim legal compliance or approve risk acceptance.

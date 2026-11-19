@@ -1,0 +1,93 @@
+$ governsutra register --root C:\Users\VATSAL~1\AppData\Local\Temp\govsut-proof-RoBQtU --input E:\Ai-Agents\GovernSutra-AI\fixtures\sample-system.json
+{
+  "id": "AI-SYS-001",
+  "name": "Customer Support Knowledge Assistant",
+  "description": "Internal support assistant that retrieves approved knowledge articles and drafts responses for staff review.",
+  "intendedUse": "Assist trained customer support staff by retrieving internal help articles and drafting response suggestions; staff review and send all responses.",
+  "prohibitedUses": [
+    "Autonomously issue refunds or change account state",
+    "Make employment, credit, medical or legal decisions",
+    "Expose customer data to unapproved providers"
+  ],
+  "owner": "Support Platform Lead",
+  "riskOwner": "Head of Customer Operations",
+  "lifecycle": "in-review",
+  "businessUnit": "Customer Operations",
+  "deploymentContext": {
+    "environment": "staging",
+    "regions": [
+      "ap-south-1"
+    ],
+    "exposure": "internal"
+  },
+  "models": [
+    {
+      "provider": "Example Model Provider",
+      "name": "Support-LLM",
+      "version": "2026-10-15",
+      "deployment": "hosted-api",
+      "provenance": "vendor release note URL to be verified by owner"
+    }
+  ],
+  "tools": [
+    {
+      "name": "Knowledge Search MCP",
+      "version": "1.2.0",
+      "transport": "stdio",
+      "permissions": [
+        "read:approved-knowledge"
+      ],
+      "owner": "Platform Engineering"
+    }
+  ],
+  "dataSources": [
+    {
+      "name": "Approved knowledge base",
+      "category": "internal-business-content",
+      "origin": "company-managed",
+      "sensitivity": "internal",
+      "retention": "source-system policy",
+      "rawDataAttached": false
+    }
+  ],
+  "affectedPeople": [
+    "support staff",
+    "customers receiving staff-reviewed answers"
+  ],
+  "humanCheckpoints": [
+    {
+      "stage": "before-send",
+      "role": "support agent",
+      "authority": "edit, reject or escalate",
+      "evidence": "ticket review event"
+    }
+  ],
+  "controls": [
+    {
+      "id": "CTRL-HUMAN-01",
+      "name": "Human review before send",
+      "status": "implemented",
+      "evidenceIds": []
+    }
+  ],
+  "risk": {
+    "decisionImpact": 3,
+    "autonomy": "assist",
+    "dataSensitivity": "internal",
+    "exposure": "internal",
+    "modelOpacity": 3,
+    "humanOversight": "documented"
+  },
+  "nextReviewAt": "2027-02-17",
+  "tags": [
+    "RAG",
+    "customer-support",
+    "human-in-the-loop"
+  ],
+  "schemaVersion": "1.0.0",
+  "createdAt": "2026-11-19T18:07:19.534Z",
+  "updatedAt": "2026-11-19T18:07:19.534Z",
+  "exceptions": []
+}
+
+[exit 0]

@@ -1,0 +1,16 @@
+{
+  "version": "0.2.0",
+  "node": "v24.15.0",
+  "platform": "win32/x64",
+  "os": "Windows_NT 10.0.26300",
+  "recordedAt": "2026-11-19T18:07:31.639Z",
+  "tests": 80,
+  "pass": 80,
+  "fail": 0,
+  "skipped": 0,
+  "auditChecks": 31,
+  "auditPassed": 30,
+  "auditSkipped": 1,
+  "auditFailed": 0,
+  "verdict": "ASSURANCE_CHECKS_PASSED_HUMAN_REVIEW_REQUIRED"
+}

@@ -1,0 +1,315 @@
+{
+  "schema": "governsutra.audit.v1",
+  "toolVersion": "0.2.0",
+  "recordedAt": "2026-11-19T18:07:31.603Z",
+  "environment": {
+    "node": "v24.15.0",
+    "platform": "win32",
+    "arch": "x64"
+  },
+  "inventory": {
+    "agents": 20,
+    "skills": 26,
+    "rules": 10,
+    "workflows": 8,
+    "hostAdapters": 9,
+    "runtimeDependencies": 0
+  },
+  "independence": "Automated self-assurance: the tool exercises its own code on hostile inputs. It is not a third-party audit. A truly independent assessment needs a qualified human outside the project.",
+  "verdictRule": "ASSURANCE_CHECKS_PASSED_HUMAN_REVIEW_REQUIRED means every executed check behaved as specified. It is never an approval, certification or compliance statement. Any failed check gives ASSURANCE_CHECKS_FAILED. Skipped checks are listed, not counted as passes.",
+  "verdict": "ASSURANCE_CHECKS_PASSED_HUMAN_REVIEW_REQUIRED",
+  "assurance": {
+    "total": 31,
+    "passed": 30,
+    "failed": 0,
+    "skipped": 1,
+    "checks": [
+      {
+        "id": "A01",
+        "title": "Altered audit event is detected",
+        "expected": "chain invalid",
+        "observed": "valid=false, issues=1",
+        "result": "pass"
+      },
+      {
+        "id": "A02",
+        "title": "Deleted audit event breaks the chain",
+        "expected": "chain invalid",
+        "observed": "valid=false, events=1",
+        "result": "pass"
+      },
+      {
+        "id": "A03",
+        "title": "Evidence path traversal is refused",
+        "expected": "error \"inside the workspace\"",
+        "observed": "Evidence file must be inside the workspace root",
+        "result": "pass"
+      },
+      {
+        "id": "A04",
+        "title": "Evidence symlink escaping the workspace is refused",
+        "expected": "error mentioning symlink",
+        "observed": "Evidence symlink resolves outside the workspace",
+        "result": "pass"
+      },
+      {
+        "id": "A05",
+        "title": "Secret-like evidence paths are refused (.env, .pem)",
+        "expected": "both refused",
+        "observed": "Secret-like paths cannot be attached as evidence; Secret-like paths cannot be attached as evidence",
+        "result": "pass"
+      },
+      {
+        "id": "A06",
+        "title": "Oversized evidence (>2 MiB) is refused",
+        "expected": "error \"exceeds 2 MiB\"",
+        "observed": "Evidence file exceeds 2 MiB limit",
+        "result": "pass"
+      },
+      {
+        "id": "A07",
+        "title": "Scanner never reads .env values",
+        "expected": "canary string absent from output",
+        "observed": "canary leaked=false",
+        "result": "pass"
+      },
+      {
+        "id": "A08",
+        "title": "Credentials in dependency URLs are redacted",
+        "expected": "password absent",
+        "observed": "leaked=false",
+        "result": "pass"
+      },
+      {
+        "id": "A09",
+        "title": "Manifest symlinked outside the repository is skipped",
+        "expected": "zero candidates + note",
+        "observed": "host cannot create symlinks without privilege",
+        "result": "skipped"
+      },
+      {
+        "id": "A10",
+        "title": "Unknown risk inputs are never scored low",
+        "expected": "band not low, 6 unknown factors",
+        "observed": "score=60, band=high, unknown=6",
+        "result": "pass"
+      },
+      {
+        "id": "A11",
+        "title": "Control marked verified without evidence fails GOV-004",
+        "expected": "GOV-004 fail",
+        "observed": "fail",
+        "result": "pass"
+      },
+      {
+        "id": "A12",
+        "title": "File presence alone is never verification",
+        "expected": "GOV-004 not pass",
+        "observed": "unknown",
+        "result": "pass"
+      },
+      {
+        "id": "A13",
+        "title": "Expired exception reopens the finding",
+        "expected": "rule fails again",
+        "observed": "fail",
+        "result": "pass"
+      },
+      {
+        "id": "A14",
+        "title": "An agent cannot approve its own exception",
+        "expected": "exception invalid, rule still fails",
+        "observed": "fail",
+        "result": "pass"
+      },
+      {
+        "id": "A15",
+        "title": "Valid human exception is recorded as exception-approved, not pass",
+        "expected": "exception-approved",
+        "observed": "exception-approved",
+        "result": "pass"
+      },
+      {
+        "id": "A16",
+        "title": "Reports escape HTML and Markdown injection",
+        "expected": "no raw tag, link syntax escaped",
+        "observed": "htmlRawTag=false",
+        "result": "pass"
+      },
+      {
+        "id": "A17",
+        "title": "A fully declared system is still never auto-approved",
+        "expected": "decision HUMAN_REVIEW_REQUIRED",
+        "observed": "HUMAN_REVIEW_REQUIRED",
+        "result": "pass"
+      },
+      {
+        "id": "A18",
+        "title": "Report text contains no unqualified compliance claim",
+        "expected": "no \"is compliant\"/\"certified\" phrasing",
+        "observed": "claim found=false",
+        "result": "pass"
+      },
+      {
+        "id": "A19",
+        "title": "Local API: auth, read-only, no CORS, loopback",
+        "expected": "401 / 405 / 403 / 127.0.0.1",
+        "observed": "noAuth=401 POST=405 origin=403 ok=200 bind=127.0.0.1",
+        "result": "pass"
+      },
+      {
+        "id": "A20",
+        "title": "Server refuses weak tokens",
+        "expected": "error",
+        "observed": "A token of at least 24 characters is required",
+        "result": "pass"
+      },
+      {
+        "id": "A21",
+        "title": "Manifest with wrong integrity digest is rejected",
+        "expected": "status digest-mismatch, no system",
+        "observed": "digest-mismatch",
+        "result": "pass"
+      },
+      {
+        "id": "A22",
+        "title": "Correct manifest digest is verified; invalid manifest is rejected",
+        "expected": "valid + invalid",
+        "observed": "{\"a.json\":\"valid\",\"b.json\":\"invalid\",\"c.json\":\"invalid-json\"}",
+        "result": "pass"
+      },
+      {
+        "id": "A23",
+        "title": "Manifest count is bounded (200 max)",
+        "expected": "200 read + note",
+        "observed": "200 read",
+        "result": "pass"
+      },
+      {
+        "id": "A24",
+        "title": "Imported manifest never overwrites an existing system",
+        "expected": "skipped, not replaced",
+        "observed": "imported=0 skipped=1",
+        "result": "pass"
+      },
+      {
+        "id": "A25",
+        "title": "Lockfile yields the exact resolved version with a JSON pointer",
+        "expected": "version 4.2.1 + pointer",
+        "observed": "4.2.1 /packages/node_modules~1openai",
+        "result": "pass"
+      },
+      {
+        "id": "A26",
+        "title": "Model version change triggers re-review",
+        "expected": "model-change-review trigger",
+        "observed": "1 change, triggers=model-change-review",
+        "result": "pass"
+      },
+      {
+        "id": "A27",
+        "title": "Host adapter install refuses to overwrite without --force",
+        "expected": "refusal then success",
+        "observed": "Refusing to overwrite C:\\Users\\VATSAL~1\\AppData\\Local\\Temp\\govsut-audit-ide-DepH4v\\.cursor\\rules\\governsutra.mdc (+71 more); pass --force af",
+        "result": "pass"
+      },
+      {
+        "id": "A28",
+        "title": "Host name path traversal is refused",
+        "expected": "Unsupported host adapter",
+        "observed": "Unsupported host adapter. See docs/IDE_COMPATIBILITY.md",
+        "result": "pass"
+      },
+      {
+        "id": "A29",
+        "title": "Sealed report detects later edits",
+        "expected": "verifySeal false after edit",
+        "observed": "intact=true, afterEdit=false",
+        "result": "pass"
+      },
+      {
+        "id": "A30",
+        "title": "Shipped inventory matches claims (20 agents, 26 skills, 10 rules, 8 workflows)",
+        "expected": "counts equal",
+        "observed": "agents=20 skills=26 rules=10 workflows=8",
+        "result": "pass"
+      },
+      {
+        "id": "A31",
+        "title": "Every agent and skill file states its boundaries (no compliance claims, human authority)",
+        "expected": "all files mention human/unknown rule",
+        "observed": "46 files checked, 0 without boundary language",
+        "result": "pass"
+      }
+    ]
+  },
+  "samples": [
+    {
+      "capability": "assess (fixture AI-SYS-001)",
+      "result": "risk 42/100 (moderate); rules pass=9 fail=0 unknown=1 n/a=0; decision HUMAN_REVIEW_REQUIRED"
+    },
+    {
+      "capability": "scan (fixtures/sample-repo)",
+      "result": "4 candidates from 4 allowlisted files; notes: 1"
+    },
+    {
+      "capability": "diff (tool permission added)",
+      "result": "1 change; triggers tool-permission-review"
+    },
+    {
+      "capability": "audit chain (fixture workspace)",
+      "result": "valid=true, events=1"
+    }
+  ],
+  "evidenceTiers": [
+    {
+      "artifact": "Assurance checks (this report)",
+      "tier": "executed",
+      "proves": "Code behaved as specified on the listed inputs on this host and Node version.",
+      "doesNotProve": "Behaviour on other inputs, hosts or future versions."
+    },
+    {
+      "artifact": "Hash-chained audit.jsonl",
+      "tier": "tamper-evident",
+      "proves": "Accidental or partial edits to the event log are detectable.",
+      "doesNotProve": "Authorship, or integrity against an admin who rewrites the whole chain."
+    },
+    {
+      "artifact": "Evidence references (SHA-256)",
+      "tier": "digest-only",
+      "proves": "File bytes matched at recording time.",
+      "doesNotProve": "That the file content is true, complete or verified by a human."
+    },
+    {
+      "artifact": "Owner declarations in registry",
+      "tier": "declared",
+      "proves": "What an owner stated.",
+      "doesNotProve": "That the statement is accurate."
+    },
+    {
+      "artifact": "Repository scan candidates",
+      "tier": "observed",
+      "proves": "A declared dependency or MCP entry exists in an allowlisted file.",
+      "doesNotProve": "That it runs in production or that the inventory is complete."
+    },
+    {
+      "artifact": "Risk score",
+      "tier": "heuristic",
+      "proves": "A transparent weighted prioritization of declared inputs.",
+      "doesNotProve": "Legal risk category, safety or harm likelihood."
+    }
+  ],
+  "notTested": [
+    "Legal compliance, certification or regulatory classification (never performed by this tool).",
+    "Native execution of the 20 agent definitions or 26 skills inside any IDE (adapters are instruction files only).",
+    "macOS, Linux and Windows behaviour beyond the host named above (see CI matrix for hosted runs).",
+    "Digital signatures, key management, WORM storage, multi-tenant isolation, encryption at rest (planned, not built).",
+    "Accuracy of owner declarations, model cards or vendor statements.",
+    "Runtime behaviour of any AI system being governed."
+  ],
+  "evidence": {
+    "algorithm": "sha256-canonical-json",
+    "sha256": "59dc1e3230b5fa7c934ff27e7ba1195ad99340b0047b1eaeefe1ffa8528b7e01",
+    "note": "Detects change after sealing. Not a digital signature."
+  }
+}

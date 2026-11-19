@@ -1,0 +1,2 @@
+export const VERSION = '0.2.0';
+export const SCANNER_VERSION = 'governsutra-scanner/0.2.0';

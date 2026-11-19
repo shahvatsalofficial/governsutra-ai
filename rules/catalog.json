@@ -1,0 +1,62 @@
+[
+  {
+    "id": "GOV-001",
+    "title": "Named accountability",
+    "description": "Every active system must have a named accountable owner and a distinct risk owner or explicitly documented role arrangement.",
+    "defaultSeverity": "fail"
+  },
+  {
+    "id": "GOV-002",
+    "title": "Intended purpose and boundaries",
+    "description": "An active system must document intended use, context, user groups and prohibited or out-of-scope uses.",
+    "defaultSeverity": "fail"
+  },
+  {
+    "id": "GOV-003",
+    "title": "No legal or certification claims",
+    "description": "Tools and agents must never declare legal compliance, certification, regulatory classification or audit assurance solely from automated checks.",
+    "defaultSeverity": "block"
+  },
+  {
+    "id": "GOV-004",
+    "title": "Evidence provenance",
+    "description": "Every control verification must identify source, scope, timestamp, verifier and integrity reference; missing evidence is unknown, not pass.",
+    "defaultSeverity": "fail"
+  },
+  {
+    "id": "GOV-005",
+    "title": "Data minimization",
+    "description": "Do not collect raw personal data, credentials, secrets, prompts containing confidential content or production records when metadata is sufficient.",
+    "defaultSeverity": "block"
+  },
+  {
+    "id": "GOV-006",
+    "title": "Human decision authority",
+    "description": "High-impact or consequential system decisions require documented human checkpoints and an authorized accountable decision-maker.",
+    "defaultSeverity": "fail"
+  },
+  {
+    "id": "GOV-007",
+    "title": "Version traceability",
+    "description": "Model, tool, prompt, dataset and deployment versions must be recorded or explicitly marked unknown with an owner and review action.",
+    "defaultSeverity": "warn"
+  },
+  {
+    "id": "GOV-008",
+    "title": "Risk uncertainty is visible",
+    "description": "Risk outputs must disclose assumptions, evidence gaps, confidence and factors; unknown must never be silently converted to low risk.",
+    "defaultSeverity": "block"
+  },
+  {
+    "id": "GOV-009",
+    "title": "Least privilege and tool consent",
+    "description": "Tool/plugin/MCP inventory must include permissions and consent boundaries; do not invoke or grant scopes without explicit authorization.",
+    "defaultSeverity": "block"
+  },
+  {
+    "id": "GOV-010",
+    "title": "Lifecycle review and expiry",
+    "description": "Active systems and exceptions must have review dates, expiry handling, change triggers and retirement/decommissioning evidence.",
+    "defaultSeverity": "warn"
+  }
+]

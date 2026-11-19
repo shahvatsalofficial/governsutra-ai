@@ -1,0 +1,9 @@
+node_modules/
+.env
+.env.*
+!.env.example
+.governsutra/
+*.log
+.DS_Store
+coverage/
+*.tgz

@@ -1,0 +1,13 @@
+{
+  "mcpServers": {
+    "internal-knowledge-search": {
+      "command": "node",
+      "args": [
+        "server.js"
+      ],
+      "env": {
+        "API_TOKEN": "${API_TOKEN}"
+      }
+    }
+  }
+}

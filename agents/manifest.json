@@ -1,0 +1,128 @@
+{
+  "product": "GovernSutra AI",
+  "creator": "Vatsal Shah",
+  "chiefAgent": "governsutra-prime",
+  "agentCount": 20,
+  "agents": [
+    {
+      "id": "governsutra-prime",
+      "name": "GovernSutra Prime",
+      "responsibility": "Chief orchestrator; decomposes governance reviews, assigns bounded specialist work, reconciles conflicts and requires named human owners for decisions.",
+      "instructionFile": "agents/governsutra-prime.md"
+    },
+    {
+      "id": "governsutra-system-inventory",
+      "name": "System Inventory Curator",
+      "responsibility": "Registers AI systems, applications, model endpoints, embedded features and agentic workflows; reconciles repository evidence with owner attestations.",
+      "instructionFile": "agents/governsutra-system-inventory.md"
+    },
+    {
+      "id": "governsutra-intended-use",
+      "name": "Intended Use Analyst",
+      "responsibility": "Captures intended purpose, users, deployment context, prohibited uses, foreseeable misuse and material changes without inventing legal classifications.",
+      "instructionFile": "agents/governsutra-intended-use.md"
+    },
+    {
+      "id": "governsutra-model-provenance",
+      "name": "Model Provenance Steward",
+      "responsibility": "Tracks provider, model identifier, immutable version or digest where available, deployment mode, release date and provenance evidence.",
+      "instructionFile": "agents/governsutra-model-provenance.md"
+    },
+    {
+      "id": "governsutra-tool-chain",
+      "name": "Tool & MCP Mapper",
+      "responsibility": "Inventories tools, MCP servers, plugins, permissions, transports, host integrations and tool versions; flags unknown trust boundaries.",
+      "instructionFile": "agents/governsutra-tool-chain.md"
+    },
+    {
+      "id": "governsutra-data-lineage",
+      "name": "Data Source Cartographer",
+      "responsibility": "Maps declared data sources, categories, origins, retention, access and transformations while avoiding collection of raw sensitive records.",
+      "instructionFile": "agents/governsutra-data-lineage.md"
+    },
+    {
+      "id": "governsutra-risk-triage",
+      "name": "Risk Triage Analyst",
+      "responsibility": "Applies transparent configurable risk indicators and explains factors, assumptions, missing information and uncertainty.",
+      "instructionFile": "agents/governsutra-risk-triage.md"
+    },
+    {
+      "id": "governsutra-impact-assessor",
+      "name": "Impact & Affected-Person Analyst",
+      "responsibility": "Documents affected people, decision consequences, recourse, accessibility and foreseeable operational or societal impacts.",
+      "instructionFile": "agents/governsutra-impact-assessor.md"
+    },
+    {
+      "id": "governsutra-human-oversight",
+      "name": "Human Oversight Designer",
+      "responsibility": "Verifies named checkpoints, reviewer authority, override paths, escalation, appeal and meaningful intervention evidence.",
+      "instructionFile": "agents/governsutra-human-oversight.md"
+    },
+    {
+      "id": "governsutra-control-evidence",
+      "name": "Control Evidence Curator",
+      "responsibility": "Maps controls to evidence artifacts, owners, dates, scope, hashes, review frequency and verification state.",
+      "instructionFile": "agents/governsutra-control-evidence.md"
+    },
+    {
+      "id": "governsutra-policy-evaluator",
+      "name": "Policy Pack Evaluator",
+      "responsibility": "Evaluates local declarative policies and records pass, fail, unknown or not-applicable with traceable rule IDs.",
+      "instructionFile": "agents/governsutra-policy-evaluator.md"
+    },
+    {
+      "id": "governsutra-privacy-boundary",
+      "name": "Privacy Boundary Guardian",
+      "responsibility": "Minimizes personal and confidential data, detects risky file locations and prevents secrets or raw records entering governance artifacts.",
+      "instructionFile": "agents/governsutra-privacy-boundary.md"
+    },
+    {
+      "id": "governsutra-security-reviewer",
+      "name": "AI Security Reviewer",
+      "responsibility": "Reviews prompt injection boundaries, model/tool permissions, supply chain, access controls, logging and runtime isolation.",
+      "instructionFile": "agents/governsutra-security-reviewer.md"
+    },
+    {
+      "id": "governsutra-change-watch",
+      "name": "Change & Version Watcher",
+      "responsibility": "Compares model, prompt, tool, data-source and deployment versions and triggers scoped re-review.",
+      "instructionFile": "agents/governsutra-change-watch.md"
+    },
+    {
+      "id": "governsutra-vendor-dependency",
+      "name": "Vendor & Dependency Analyst",
+      "responsibility": "Tracks external model providers, SDKs, hosting, subprocessors as declared, lock-in and dependency lifecycle evidence.",
+      "instructionFile": "agents/governsutra-vendor-dependency.md"
+    },
+    {
+      "id": "governsutra-lifecycle-steward",
+      "name": "Lifecycle Steward",
+      "responsibility": "Maintains stage, review dates, suspension/retirement decisions, decommissioning evidence and stale-record queues.",
+      "instructionFile": "agents/governsutra-lifecycle-steward.md"
+    },
+    {
+      "id": "governsutra-audit-verifier",
+      "name": "Audit Trail Verifier",
+      "responsibility": "Verifies hash-chained event records, actor attribution, event sequence and integrity limitations.",
+      "instructionFile": "agents/governsutra-audit-verifier.md"
+    },
+    {
+      "id": "governsutra-exception-arbiter",
+      "name": "Exception & Risk Acceptance Coordinator",
+      "responsibility": "Records exception rationale, scope, approver, expiry, compensating controls and review obligations; cannot approve on behalf of people.",
+      "instructionFile": "agents/governsutra-exception-arbiter.md"
+    },
+    {
+      "id": "governsutra-ide-bridge",
+      "name": "IDE & Server Portability Bridge",
+      "responsibility": "Maintains portable AGENTS.md and SKILL.md contracts plus host-specific project-local adapters and compatibility tests.",
+      "instructionFile": "agents/governsutra-ide-bridge.md"
+    },
+    {
+      "id": "governsutra-independent-auditor",
+      "name": "Independent Assurance Auditor",
+      "responsibility": "Challenges evidence quality, checks negative cases, identifies unsupported assertions and produces an independent readiness review.",
+      "instructionFile": "agents/governsutra-independent-auditor.md"
+    }
+  ]
+}

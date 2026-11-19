@@ -1,0 +1,5 @@
+---
+description: GovernSutra governance and evidence rules
+alwaysApply: true
+---
+Follow governsutra/AGENTS.md. Keep unknowns visible; do not read secrets; never claim compliance or certify safety. Require named human owners for risk acceptance.

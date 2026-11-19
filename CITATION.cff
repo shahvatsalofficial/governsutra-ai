@@ -1,0 +1,14 @@
+cff-version: 1.2.0
+message: "If you use GovernSutra AI, please cite it as below."
+title: "GovernSutra AI"
+abstract: "Local-first AI system governance CLI: AI inventory, ten transparent governance rules, evidence references, hash-chained audit log, change diffs and audit reports in Markdown, HTML and JSON, with 20 agent roles and 26 portable agent skills."
+type: software
+authors:
+  - family-names: Shah
+    given-names: Vatsal
+version: 0.2.0
+date-released: 2026-11-19
+license: Apache-2.0
+url: "https://shahvatsalofficial.github.io/governsutra-ai/"
+repository-code: "https://github.com/shahvatsalofficial/governsutra-ai"
+keywords: [ai-governance, ai-inventory, ai-risk, audit-trail, evidence, mcp, human-oversight, agent-skills, responsible-ai]

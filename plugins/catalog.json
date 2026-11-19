@@ -1,0 +1,74 @@
+[
+  {
+    "id": "repo-discovery",
+    "name": "Repository Discovery Adapter",
+    "status": "implemented-local",
+    "purpose": "Allowlisted dependency and MCP manifest inventory; candidate records only."
+  },
+  {
+    "id": "policy-packs",
+    "name": "Policy Pack Engine",
+    "status": "implemented-basic",
+    "purpose": "Local deterministic rule catalogue; organization-specific mappings require review."
+  },
+  {
+    "id": "evidence-vault",
+    "name": "Evidence Reference Store",
+    "status": "implemented-local",
+    "purpose": "SHA-256 evidence references; no raw secret payloads."
+  },
+  {
+    "id": "read-only-api",
+    "name": "Governance Read API",
+    "status": "implemented-local",
+    "purpose": "Token-protected loopback HTTP endpoints."
+  },
+  {
+    "id": "mcp-readonly",
+    "name": "GovernSutra MCP Server",
+    "status": "planned",
+    "purpose": "Future read-only MCP tools; require explicit scopes, consent and protocol security review."
+  },
+  {
+    "id": "github-actions",
+    "name": "GitHub Actions",
+    "status": "planned",
+    "purpose": "CI inventory and review gates; no autonomous risk acceptance."
+  },
+  {
+    "id": "gitlab-ci",
+    "name": "GitLab CI",
+    "status": "planned",
+    "purpose": "CI review packet generation."
+  },
+  {
+    "id": "azure-pipelines",
+    "name": "Azure Pipelines",
+    "status": "planned",
+    "purpose": "Pipeline evidence adapter."
+  },
+  {
+    "id": "model-registry",
+    "name": "Model Registry Connectors",
+    "status": "planned",
+    "purpose": "MLflow, Hugging Face and vendor registry metadata; read-only scopes."
+  },
+  {
+    "id": "data-catalog",
+    "name": "Data Catalog Connectors",
+    "status": "planned",
+    "purpose": "DataHub, OpenMetadata and catalog metadata; no row-level extraction."
+  },
+  {
+    "id": "sso-oidc",
+    "name": "SSO / OIDC",
+    "status": "planned",
+    "purpose": "Future multi-user identity and role-based access."
+  },
+  {
+    "id": "storage-adapters",
+    "name": "SQLite / PostgreSQL",
+    "status": "planned",
+    "purpose": "Persistent shared registry with migrations and access controls."
+  }
+]
