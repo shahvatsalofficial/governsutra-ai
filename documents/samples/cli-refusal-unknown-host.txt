@@ -1,6 +1,0 @@
-$ governsutra install-ide --host ../x --target C:\Users\VATSAL~1\AppData\Local\Temp\govsut-proof-VSmqX5\ide2
-
-[stderr]
-GovernSutra: Unsupported host adapter. See docs/IDE_COMPATIBILITY.md
-
-[exit 1]

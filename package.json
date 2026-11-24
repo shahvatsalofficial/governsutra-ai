@@ -1,6 +1,6 @@
 {
   "name": "governsutra-ai",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "private": false,
   "type": "module",
   "description": "GovernSutra AI: local-first AI system governance registry, evidence and risk intelligence CLI. Tracks AI systems, models, tools, MCP servers and data sources; evaluates 10 transparent rules; hash-chained audit log; JSON/Markdown/HTML audit reports; 20 agent roles and 26 portable skills. Zero dependencies, no API keys.",
@@ -21,6 +21,7 @@
     "audit": "node packages/cli/index.mjs audit --out examples/audit --force",
     "proof": "node scripts/proof.mjs",
     "docs:build": "node documents/build.mjs",
+    "docs:check": "node scripts/check-links.mjs",
     "pack:check": "npm pack --dry-run"
   },
   "bin": {

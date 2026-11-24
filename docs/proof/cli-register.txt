@@ -1,4 +1,4 @@
-$ governsutra register --root C:\Users\VATSAL~1\AppData\Local\Temp\govsut-proof-VSmqX5 --input E:\Ai-Agents\GovernSutra-AI\fixtures\sample-system.json
+$ governsutra register --root C:\Users\VATSAL~1\AppData\Local\Temp\govsut-proof-aAxVP1 --input E:\Ai-Agents\GovernSutra-AI\fixtures\sample-system.json
 {
   "id": "AI-SYS-001",
   "name": "Customer Support Knowledge Assistant",
@@ -85,8 +85,8 @@ $ governsutra register --root C:\Users\VATSAL~1\AppData\Local\Temp\govsut-proof-
     "human-in-the-loop"
   ],
   "schemaVersion": "1.0.0",
-  "createdAt": "2026-11-19T19:01:48.362Z",
-  "updatedAt": "2026-11-19T19:01:48.362Z",
+  "createdAt": "2026-11-24T19:20:55.498Z",
+  "updatedAt": "2026-11-24T19:20:55.498Z",
   "exceptions": []
 }
 

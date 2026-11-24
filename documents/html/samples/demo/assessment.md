@@ -1,13 +1,12 @@
-$ governsutra assess --root C:\Users\VATSAL~1\AppData\Local\Temp\govsut-proof-VSmqX5 --id AI-SYS-001 --format md
 # GovernSutra AI — System Assessment: Customer Support Knowledge Assistant
 
 > **Decision:** `HUMAN_REVIEW_REQUIRED` — Automated checks never approve a system, an exception or a release. A named human owner decides.
 
 **System:** Customer Support Knowledge Assistant \(AI-SYS-001\)  
 **Lifecycle:** in-review  
-**Generated:** 2026-11-19T19:01:49.367Z  
+**Generated:** 2026-11-24T19:18:16.431Z  
 **Review scope:** Registry record plus attached evidence references only. No runtime, code or data inspection.  
-**Data cutoff (record last updated):** 2026-11-19T19:01:48.362Z  
+**Data cutoff (record last updated):** 2026-11-24T19:18:16.402Z  
 **Record provenance:** owner-declared  
 **Internal risk indicator:** 42/100 \(moderate\) — risk-model/1.0  
 **Inventory completeness:** 100% \(9/9\)  
@@ -83,9 +82,6 @@ _Unknown inputs are scored 3 of 5 \(mid-scale\) and listed in unknownFactors; th
 - This is an internal engineering review aid. It is not legal advice, a regulatory classification, a compliance determination, a certification or proof of safety.
 
 ---
-GovernSutra AI 0.2.1 · Know the system. Trace the evidence. Keep humans accountable. · created by Vatsal Shah · Apache-2.0
+GovernSutra AI 0.2.2 · Know the system. Trace the evidence. Keep humans accountable. · created by Vatsal Shah · Apache-2.0
 
 _This is an internal engineering review aid. It is not legal advice, a regulatory classification, a compliance determination, a certification or proof of safety._
-
-
-[exit 0]

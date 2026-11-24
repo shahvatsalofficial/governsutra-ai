@@ -1,5 +1,14 @@
 # Changelog
 
+## 0.2.2 — 2026-11-25
+
+### Changed
+- **Documentation website rebuilt** as a real site: light theme by default with a persistent dark toggle, responsive desktop and mobile layout (drawer navigation, no horizontal overflow), landing page, sticky sidebar, on-page contents, copy buttons.
+- **Visuals:** SVG flow diagrams (pipeline, rule-status decision, audit chain, CI), architecture layers, a "tool prepares / human decides" boundary figure, evidence tiers, and charts for risk weights, score sensitivity, rule statuses and proof counts. Figures follow the theme.
+- **Real-world scenarios page:** seven situations (PR adds AI, auditor request, model bump, evidence drift, exception rules, audit-log edit, report edit) whose terminals are real CLI output captured at build time.
+- Build prints no hand-edited numbers: every count comes from `docs/proof`. New `npm run docs:check` verifies all internal links and anchors (0 broken).
+- Chart layout bug fixed (value and track columns were swapped).
+
 ## 0.2.1 — 2026-11-20
 
 ### Added

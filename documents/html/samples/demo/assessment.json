@@ -1,0 +1,267 @@
+{
+  "schema": "governsutra.assessment.v2",
+  "systemId": "AI-SYS-001",
+  "systemName": "Customer Support Knowledge Assistant",
+  "lifecycle": "in-review",
+  "generatedAt": "2026-11-24T19:18:16.431Z",
+  "toolVersion": "0.2.2",
+  "scope": {
+    "boundary": "Registry record plus attached evidence references only. No runtime, code or data inspection.",
+    "dataCutoff": "2026-11-24T19:18:16.402Z",
+    "provenance": {
+      "kind": "owner-declared"
+    }
+  },
+  "components": {
+    "models": [
+      {
+        "provider": "Example Model Provider",
+        "name": "Support-LLM",
+        "version": "2026-10-15",
+        "deployment": "hosted-api",
+        "provenance": "vendor release note URL to be verified by owner"
+      }
+    ],
+    "tools": [
+      {
+        "name": "Knowledge Search MCP",
+        "version": "1.2.0",
+        "transport": "stdio",
+        "permissions": [
+          "read:approved-knowledge"
+        ],
+        "owner": "Platform Engineering"
+      }
+    ],
+    "dataSources": [
+      {
+        "name": "Approved knowledge base",
+        "category": "internal-business-content",
+        "origin": "company-managed",
+        "sensitivity": "internal",
+        "retention": "source-system policy",
+        "rawDataAttached": false
+      }
+    ]
+  },
+  "risk": {
+    "model": "risk-model/1.0",
+    "score": 42,
+    "band": "moderate",
+    "interpretation": "Internal prioritization indicator only; not a legal category, certification or safety determination.",
+    "missingDataBehavior": "Unknown inputs are scored 3 of 5 (mid-scale) and listed in unknownFactors; they are never treated as low.",
+    "unknownFactors": [],
+    "factors": [
+      {
+        "key": "decisionImpact",
+        "label": "Decision impact",
+        "weight": 25,
+        "value": 3,
+        "unknown": false
+      },
+      {
+        "key": "autonomy",
+        "label": "System autonomy",
+        "weight": 20,
+        "value": 2,
+        "unknown": false
+      },
+      {
+        "key": "dataSensitivity",
+        "label": "Data sensitivity",
+        "weight": 20,
+        "value": 2,
+        "unknown": false
+      },
+      {
+        "key": "exposure",
+        "label": "Deployment exposure",
+        "weight": 15,
+        "value": 1,
+        "unknown": false
+      },
+      {
+        "key": "modelOpacity",
+        "label": "Model transparency gap",
+        "weight": 10,
+        "value": 3,
+        "unknown": false
+      },
+      {
+        "key": "humanOversight",
+        "label": "Human oversight gap",
+        "weight": 10,
+        "value": 1,
+        "unknown": false
+      }
+    ],
+    "sensitivity": [
+      {
+        "key": "decisionImpact",
+        "label": "Decision impact",
+        "unknown": false,
+        "scoreIfMin": 32,
+        "scoreIfMax": 52
+      },
+      {
+        "key": "autonomy",
+        "label": "System autonomy",
+        "unknown": false,
+        "scoreIfMin": 38,
+        "scoreIfMax": 54
+      },
+      {
+        "key": "dataSensitivity",
+        "label": "Data sensitivity",
+        "unknown": false,
+        "scoreIfMin": 38,
+        "scoreIfMax": 54
+      },
+      {
+        "key": "exposure",
+        "label": "Deployment exposure",
+        "unknown": false,
+        "scoreIfMin": 42,
+        "scoreIfMax": 54
+      },
+      {
+        "key": "modelOpacity",
+        "label": "Model transparency gap",
+        "unknown": false,
+        "scoreIfMin": 38,
+        "scoreIfMax": 46
+      },
+      {
+        "key": "humanOversight",
+        "label": "Human oversight gap",
+        "unknown": false,
+        "scoreIfMin": 42,
+        "scoreIfMax": 50
+      }
+    ]
+  },
+  "completeness": {
+    "score": 100,
+    "completed": 9,
+    "total": 9,
+    "missing": []
+  },
+  "rules": [
+    {
+      "id": "GOV-001",
+      "title": "Named accountability",
+      "severity": "high",
+      "status": "pass",
+      "reason": "Owner and risk owner are named (owner declaration, not verified).",
+      "ownerAction": "Assign an accountable owner and a risk owner."
+    },
+    {
+      "id": "GOV-002",
+      "title": "Intended use and boundaries",
+      "severity": "high",
+      "status": "pass",
+      "reason": "Intended and prohibited uses are documented (owner declaration).",
+      "ownerAction": "Document intended and prohibited uses."
+    },
+    {
+      "id": "GOV-003",
+      "title": "No compliance claims",
+      "severity": "block",
+      "status": "pass",
+      "reason": "Engine design rule: output always requires human review and never states compliance.",
+      "ownerAction": null
+    },
+    {
+      "id": "GOV-004",
+      "title": "Evidence provenance",
+      "severity": "high",
+      "status": "unknown",
+      "reason": "No control is verified by a named reviewer; presence of a file is not verification.",
+      "ownerAction": "Have a named reviewer verify controls."
+    },
+    {
+      "id": "GOV-005",
+      "title": "Data minimization",
+      "severity": "block",
+      "status": "pass",
+      "reason": "Data sources declared as metadata with no raw data attached (owner declaration).",
+      "ownerAction": null
+    },
+    {
+      "id": "GOV-006",
+      "title": "Human decision authority",
+      "severity": "high",
+      "status": "pass",
+      "reason": "Human checkpoints name a role and authority (declared; actual intervention not evidenced).",
+      "ownerAction": null
+    },
+    {
+      "id": "GOV-007",
+      "title": "Version traceability",
+      "severity": "medium",
+      "status": "pass",
+      "reason": "All declared models and tools record a version.",
+      "ownerAction": "Record versions or mark them explicitly unknown."
+    },
+    {
+      "id": "GOV-008",
+      "title": "Risk uncertainty visible",
+      "severity": "block",
+      "status": "pass",
+      "reason": "All risk inputs are declared.",
+      "ownerAction": "Resolve unknown risk dimensions or document why they stay unknown."
+    },
+    {
+      "id": "GOV-009",
+      "title": "Least privilege and tool consent",
+      "severity": "high",
+      "status": "pass",
+      "reason": "Every tool lists its permission scopes (declared).",
+      "ownerAction": "List least-privilege scopes for each tool."
+    },
+    {
+      "id": "GOV-010",
+      "title": "Lifecycle review and expiry",
+      "severity": "medium",
+      "status": "pass",
+      "reason": "Next review 2027-02-17.",
+      "ownerAction": null
+    }
+  ],
+  "findings": [
+    {
+      "id": "GOV-004",
+      "severity": "high",
+      "status": "unknown",
+      "claim": "No control is verified by a named reviewer; presence of a file is not verification.",
+      "evidence": [],
+      "confidence": "low-to-medium",
+      "limitations": "Static registry assessment of owner declarations; owner confirmation required.",
+      "recommendedOwnerAction": "Have a named reviewer verify controls."
+    }
+  ],
+  "unknowns": [
+    "GOV-004: No control is verified by a named reviewer; presence of a file is not verification."
+  ],
+  "controls": [
+    {
+      "id": "CTRL-HUMAN-01",
+      "name": "Human review before send",
+      "status": "implemented",
+      "evidenceIds": []
+    }
+  ],
+  "evidence": [],
+  "exceptions": [],
+  "humanDecisions": [],
+  "decision": "HUMAN_REVIEW_REQUIRED",
+  "recommendedActions": [
+    "GOV-004: Have a named reviewer verify controls."
+  ],
+  "limitations": [
+    "Rules evaluate owner declarations and attached evidence references; they do not verify that declarations are true.",
+    "Risk score is an internal prioritization indicator, not a legal risk tier.",
+    "Framework mappings are informational and are not applied automatically."
+  ],
+  "disclaimer": "This is an internal engineering review aid. It is not legal advice, a regulatory classification, a compliance determination, a certification or proof of safety."
+}

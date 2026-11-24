@@ -1,6 +1,8 @@
 # Security and Privacy
 
 ## Assets and threats
+
+<!--@@html:boundary@@-->
 | Threat | Mitigation in code | Proof |
 |---|---|---|
 | Prompt injection via repository text, model cards or MCP descriptions | Content is treated as data; the engine never executes or follows it; reports escape it | audit A16, fuzz renderer cases |

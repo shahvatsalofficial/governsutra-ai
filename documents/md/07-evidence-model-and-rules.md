@@ -1,6 +1,8 @@
 # Evidence Model and Rules
 
 ## Evidence tiers
+
+<!--@@html:tiers@@-->
 Not all evidence is equal. Reports label each tier.
 | Tier | Example | Proves | Does not prove |
 |---|---|---|---|
@@ -14,6 +16,11 @@ Not all evidence is equal. Reports label each tier.
 `id`, `systemId`, `kind`, `relativePath`, `sha256`, `sizeBytes`, `scope`, `recordedAt`, `expiresAt`, `verifier`, `limitations`, `status = reference-hashed-not-content-validated`. File content is not copied.
 
 ## Rule evaluation
+
+<!--@@diagram:decision@@-->
+
+<!--@@rules@@-->
+
 Each rule returns exactly one status with a reason:
 - **pass** - the specific requirement is met by declaration or evidence (always labelled declared or verified).
 - **fail** - a requirement is explicitly unmet.
@@ -36,6 +43,8 @@ After expiry the finding is reopened and the reason says so.
 `evidence verify` re-hashes each file: `ok`, `digest-changed`, `missing`, `expired`, `unsafe-path`.
 
 ## Audit chain
+
+<!--@@diagram:chain@@-->
 Sequential events chained by `prevHash`. `audit verify` reports issues by line: `invalid JSON`, `sequence mismatch`, `previous hash mismatch`, `event hash mismatch`. Not a signature or WORM storage.
 
 ## Seals

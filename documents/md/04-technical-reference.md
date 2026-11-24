@@ -35,6 +35,11 @@ import { ensureWorkspace, registerSystem, assessSystem, scanRepository, diffSyst
 | `seal` / `verifySeal` | canonical SHA-256 seal |
 
 ## Risk model `risk-model/1.0`
+
+<!--@@bars:weights@@-->
+
+<!--@@bars:sensitivity@@-->
+
 Score = round(sum(value/5 x weight)). Weights: decision impact 25, autonomy 20, data sensitivity 20, deployment exposure 15, model transparency gap 10, human oversight gap 10. Values 1-5 (maps: autonomy none 1, assist 2, partial 4, automated 5; sensitivity public 1 ... sensitive 5; exposure internal 1, external 5; oversight documented 1, partial 3, unknown 5). Unknown inputs use 3 and are listed. Bands: under 25 low, under 50 moderate, under 75 high, else critical. **Internal prioritization only.**
 
 ## Scanner allowlist

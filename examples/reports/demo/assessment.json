@@ -3,11 +3,11 @@
   "systemId": "AI-SYS-001",
   "systemName": "Customer Support Knowledge Assistant",
   "lifecycle": "in-review",
-  "generatedAt": "2026-11-19T18:59:53.222Z",
-  "toolVersion": "0.2.1",
+  "generatedAt": "2026-11-24T19:18:16.431Z",
+  "toolVersion": "0.2.2",
   "scope": {
     "boundary": "Registry record plus attached evidence references only. No runtime, code or data inspection.",
-    "dataCutoff": "2026-11-19T18:59:53.207Z",
+    "dataCutoff": "2026-11-24T19:18:16.402Z",
     "provenance": {
       "kind": "owner-declared"
     }

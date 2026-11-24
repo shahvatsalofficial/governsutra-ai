@@ -3,6 +3,8 @@
 GovernSutra is a small, layered, dependency-free system. Core logic is deterministic and offline; AI IDEs may add reasoning on top through portable instruction files, but the engine never needs a model.
 
 ## Layers
+
+<!--@@html:layers@@-->
 | Layer | Module | Responsibility |
 |---|---|---|
 | Experience | `packages/cli`, `packages/reporting` | Strict argument parsing; one block list rendered to Markdown and HTML so formats agree |
@@ -15,6 +17,8 @@ GovernSutra is a small, layered, dependency-free system. Core logic is determini
 | Persistence | `.governsutra/` | JSON registry, evidence index, `audit.jsonl` hash chain |
 
 ## Data flow
+
+<!--@@diagram:pipeline@@-->
 ```
 repo files --(allowlist, 2 MiB cap, no symlink)--> scan --> candidates (observed)
 owner JSON --> register / import-manifests --> registry (declared)

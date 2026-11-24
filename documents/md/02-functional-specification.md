@@ -40,6 +40,8 @@ Statuses: `pass`, `fail`, `unknown`, `not-applicable`, `exception-approved`. See
 `planned`, `implemented`, `evidence-attached`, `verified-by-named-reviewer`, `failed`, `unknown`, `not-applicable`, `exception-approved`. Only `verified-by-named-reviewer` with evidence and a verifier can satisfy GOV-004. File presence is never verification.
 
 ## Exceptions
+
+<!--@@diagram:decision@@-->
 Valid only with: named **human** approver, rationale, scope, target rule, and a future expiry. Agent approvers are invalid. An expired or invalid exception leaves the rule failing and says why.
 
 ## Non-functional requirements

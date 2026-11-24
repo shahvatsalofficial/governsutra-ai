@@ -1,10 +1,10 @@
-# GovernSutra AI — documents
+# GovernSutra AI documents
 
-Complete documentation set for **GovernSutra AI 0.2.1** (executive, functional, architecture, technical, user guide, security, evidence and rules, test report, operations, legal, roadmap and FAQ, glossary, assurance).
+Documentation set for **GovernSutra AI 0.2.2**: executive, functional, architecture, technical, user guide, real-world scenarios, security, evidence and rules, test report, assurance, operations, legal, roadmap and FAQ, glossary.
 
-- Start: `html/index.html` (open in a browser; self-contained, responsive, light/dark, printable)
-- Markdown sources: `md/` (with placeholders) and `md-rendered/` (numbers filled from the recorded run)
-- Proof: `test-results/` (TAP log, fuzz, environment) · Samples: `samples/` (real audit report in MD/HTML/JSON, CLI transcripts)
-- Rebuild: `node build.mjs` after `npm run proof` and `npm run audit` in `../../GovernSutra-AI`
+- Website (light default, dark toggle, responsive): https://shahvatsalofficial.github.io/governsutra-ai/
+- Markdown sources: `md/` (placeholders like `{{TESTS}}` are filled at build time from `docs/proof`)
+- Build: `npm run proof && npm run docs:build` writes `html/`. Scenario terminals are real CLI output.
+- Site engine: `build.mjs`, `site/` (CSS, JS, SVG figure helpers)
 
 Project: https://github.com/shahvatsalofficial/governsutra-ai

@@ -3,6 +3,8 @@
 Recorded by `npm run proof` on **{{RECORDED}}**, Node **{{NODE}}**, **{{PLATFORM}}**, GovernSutra **{{VERSION}}**. Raw output is in [test-results/test-run.tap](test-results/test-run.tap); nothing here is hand-edited.
 
 ## Summary
+
+<!--@@bars:proof@@-->
 | Suite | Result |
 |---|---|
 | Automated tests (`node --test`) | {{TESTS}} total, **{{PASS}} passed**, {{FAIL}} failed, {{SKIPPED}} skipped |

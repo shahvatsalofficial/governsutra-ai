@@ -1,3 +1,4 @@
 User-agent: *
 Allow: /
+
 Sitemap: https://shahvatsalofficial.github.io/governsutra-ai/sitemap.xml

@@ -3,6 +3,8 @@
 How to check what GovernSutra {{VERSION}} claims, without trusting the author.
 
 ## Independent-style audit
+
+<!--@@bars:proof@@-->
 `governsutra audit --out DIR` runs {{AUDIT_CHECKS}} checks and writes a sealed report in JSON, Markdown and HTML. The verdict `{{VERDICT}}` here means every executed check behaved as specified on this host. It is not an approval. Skipped checks ({{AUDIT_SKIPPED}}) are listed, not counted as passes.
 
 Open the [sample audit report (HTML)](samples/audit/audit-report.html), [Markdown](samples/audit/audit-report.md) or [JSON](samples/audit/audit-report.json).

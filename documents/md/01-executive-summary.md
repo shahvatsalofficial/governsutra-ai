@@ -6,6 +6,8 @@
 AI systems spread across repositories, vendors and teams. Owners, intended uses, model and tool versions, data sources and evidence live in scattered documents. Reviews are hard to reproduce, and compliance dashboards often show green badges that nothing supports.
 
 ## The product
+
+<!--@@diagram:pipeline@@-->
 - A zero-dependency Node.js CLI (`governsutra`). No API key, no account, no network, no telemetry.
 - **Register:** owner, risk owner, intended and prohibited use, models, tools and MCP servers, data sources, human checkpoints, controls, exceptions, review dates.
 - **Discover:** safe, bounded scan of allowlisted repository files (dependencies, lockfiles, MCP configs, CI actions, owner manifests). Output is *candidates*; an owner confirms.
@@ -22,6 +24,8 @@ AI systems spread across repositories, vendors and teams. Owners, intended uses,
 - Raw logs, transcripts and SHA-256 sums are published in `test-results/` and `samples/`.
 
 ## What it is not
+
+<!--@@html:boundary@@-->
 Not legal advice. Not a regulatory classification. Not a certification. Not proof of safety. It never approves an exception or a release; every assessment ends in `HUMAN_REVIEW_REQUIRED`. See [Legal and governance](10-legal-and-governance).
 
 ## Who benefits

@@ -12,6 +12,8 @@
 | `npm run pack:check` | `npm pack --dry-run` |
 
 ## Continuous integration
+
+<!--@@diagram:ci@@-->
 `.github/workflows/ci.yml`: tests, doctor, demo and audit on Ubuntu (Node 22, 24), Windows (22, 24) and macOS (24); an npm-pack smoke test through the bin shim; a committed-secret scan. `pages.yml` publishes `documents/html` to GitHub Pages. `release.yml` publishes to npm on a `vX.Y.Z` tag.
 
 ## Release checklist

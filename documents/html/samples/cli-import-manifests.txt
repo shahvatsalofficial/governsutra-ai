@@ -1,4 +1,4 @@
-$ governsutra import-manifests --root C:\Users\VATSAL~1\AppData\Local\Temp\govsut-proof-VSmqX5 --repo E:\Ai-Agents\GovernSutra-AI\fixtures\sample-repo
+$ governsutra import-manifests --root C:\Users\VATSAL~1\AppData\Local\Temp\govsut-proof-aAxVP1 --repo E:\Ai-Agents\GovernSutra-AI\fixtures\sample-repo
 {
   "imported": [
     {

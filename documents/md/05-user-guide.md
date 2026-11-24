@@ -1,6 +1,6 @@
 # User Guide
 
-A walk-through from zero to a reviewed AI system. All commands run offline.
+A walk-through from zero to a reviewed AI system. All commands run offline. Prefer stories? Read the [real-world scenarios](14-real-world-scenarios) first, then come back here.
 
 ## 1. Check your machine
 ```bash
@@ -46,6 +46,8 @@ governsutra import-manifests --repo ../my-app
 ```
 
 ## 8. Detect change
+
+<!--@@diagram:ci@@-->
 ```bash
 governsutra diff --a last-quarter.json --b today.json --format html > change.html
 ```

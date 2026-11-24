@@ -1,7 +1,7 @@
 {
   "schema": "governsutra.audit.v1",
-  "toolVersion": "0.2.1",
-  "recordedAt": "2026-11-19T19:00:01.320Z",
+  "toolVersion": "0.2.2",
+  "recordedAt": "2026-11-24T19:18:27.665Z",
   "environment": {
     "node": "v24.15.0",
     "platform": "win32",
@@ -210,7 +210,7 @@
         "id": "A27",
         "title": "Host adapter install refuses to overwrite without --force",
         "expected": "refusal then success",
-        "observed": "Refusing to overwrite C:\\Users\\VATSAL~1\\AppData\\Local\\Temp\\govsut-audit-ide-hCBuTt\\.cursor\\rules\\governsutra.mdc (+71 more); pass --force af",
+        "observed": "Refusing to overwrite C:\\Users\\VATSAL~1\\AppData\\Local\\Temp\\govsut-audit-ide-KGrIKx\\.cursor\\rules\\governsutra.mdc (+71 more); pass --force af",
         "result": "pass"
       },
       {
@@ -309,7 +309,7 @@
   ],
   "evidence": {
     "algorithm": "sha256-canonical-json",
-    "sha256": "bad07568a5fbcf6fe5f624682bb1626dc47d55df4c0e7f38f3901d48887eebd2",
+    "sha256": "819e2126702b5a060118998becfdf268636331752bb2e6c915cb0c67e1c15f4c",
     "note": "Detects change after sealing. Not a digital signature."
   }
 }

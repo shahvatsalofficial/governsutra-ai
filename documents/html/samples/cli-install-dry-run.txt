@@ -1,8 +1,8 @@
-$ governsutra install-ide --host cursor --target C:\Users\VATSAL~1\AppData\Local\Temp\govsut-proof-VSmqX5\ide --dry-run
+$ governsutra install-ide --host cursor --target C:\Users\VATSAL~1\AppData\Local\Temp\govsut-proof-aAxVP1\ide --dry-run
 {
   "host": "cursor",
-  "target": "C:\\Users\\VATSAL~1\\AppData\\Local\\Temp\\govsut-proof-VSmqX5\\ide",
-  "portableAssets": "C:\\Users\\VATSAL~1\\AppData\\Local\\Temp\\govsut-proof-VSmqX5\\ide\\governsutra",
+  "target": "C:\\Users\\VATSAL~1\\AppData\\Local\\Temp\\govsut-proof-aAxVP1\\ide",
+  "portableAssets": "C:\\Users\\VATSAL~1\\AppData\\Local\\Temp\\govsut-proof-aAxVP1\\ide\\governsutra",
   "files": 72,
   "overwrites": false,
   "dryRun": true,

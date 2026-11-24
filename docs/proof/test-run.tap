@@ -2,481 +2,481 @@ TAP version 13
 # Subtest: CLI initializes and reports doctor status
 ok 1 - CLI initializes and reports doctor status
   ---
-  duration_ms: 492.008
+  duration_ms: 1729.9828
   type: 'test'
   ...
 # Subtest: CLI registers fixture and lists system
 ok 2 - CLI registers fixture and lists system
   ---
-  duration_ms: 1604.8038
+  duration_ms: 1578.6156
   type: 'test'
   ...
 # Subtest: CLI installs host adapter and refuses overwrite by default
 ok 3 - CLI installs host adapter and refuses overwrite by default
   ---
-  duration_ms: 2820.6483
+  duration_ms: 3663.7047
   type: 'test'
   ...
 # Subtest: CLI rejects unknown adapter
 ok 4 - CLI rejects unknown adapter
   ---
-  duration_ms: 691.9563
+  duration_ms: 870.1558
   type: 'test'
   ...
 # Subtest: workspace initialization is idempotent
 ok 5 - workspace initialization is idempotent
   ---
-  duration_ms: 19.3799
+  duration_ms: 29.1569
   type: 'test'
   ...
 # Subtest: registers valid system and lists it
 ok 6 - registers valid system and lists it
   ---
-  duration_ms: 36.4796
+  duration_ms: 43.9771
   type: 'test'
   ...
 # Subtest: rejects duplicate IDs
 ok 7 - rejects duplicate IDs
   ---
-  duration_ms: 29.9246
+  duration_ms: 37.098
   type: 'test'
   ...
 # Subtest: rejects missing owner and purpose
 ok 8 - rejects missing owner and purpose
   ---
-  duration_ms: 0.2703
+  duration_ms: 0.4487
   type: 'test'
   ...
 # Subtest: rejects unsafe IDs
 ok 9 - rejects unsafe IDs
   ---
-  duration_ms: 0.9377
+  duration_ms: 0.4699
   type: 'test'
   ...
 # Subtest: risk score is bounded and transparent
 ok 10 - risk score is bounded and transparent
   ---
-  duration_ms: 0.4017
+  duration_ms: 0.825
   type: 'test'
   ...
 # Subtest: unknown risk inputs remain visible
 ok 11 - unknown risk inputs remain visible
   ---
-  duration_ms: 0.1706
+  duration_ms: 0.4216
   type: 'test'
   ...
 # Subtest: higher autonomy increases risk
 ok 12 - higher autonomy increases risk
   ---
-  duration_ms: 0.1745
+  duration_ms: 0.3817
   type: 'test'
   ...
 # Subtest: completeness reports missing items
 ok 13 - completeness reports missing items
   ---
-  duration_ms: 0.2166
+  duration_ms: 0.5447
   type: 'test'
   ...
 # Subtest: assessment never claims compliance
 ok 14 - assessment never claims compliance
   ---
-  duration_ms: 57.7013
+  duration_ms: 42.4522
   type: 'test'
   ...
 # Subtest: unknown data source produces unknown finding
 ok 15 - unknown data source produces unknown finding
   ---
-  duration_ms: 36.4084
+  duration_ms: 39.9377
   type: 'test'
   ...
 # Subtest: audit chain verifies after registration
 ok 16 - audit chain verifies after registration
   ---
-  duration_ms: 23.9775
+  duration_ms: 40.2974
   type: 'test'
   ...
 # Subtest: audit chain detects altered event
 ok 17 - audit chain detects altered event
   ---
-  duration_ms: 28.054
+  duration_ms: 40.6455
   type: 'test'
   ...
 # Subtest: evidence hashes file without copying content
 ok 18 - evidence hashes file without copying content
   ---
-  duration_ms: 113.7192
+  duration_ms: 76.778
   type: 'test'
   ...
 # Subtest: evidence rejects path traversal
 ok 19 - evidence rejects path traversal
   ---
-  duration_ms: 27.5891
+  duration_ms: 44.1258
   type: 'test'
   ...
 # Subtest: evidence rejects .env files
 ok 20 - evidence rejects .env files
   ---
-  duration_ms: 29.0575
+  duration_ms: 49.1339
   type: 'test'
   ...
 # Subtest: repository scan detects provider dependency and MCP server
 ok 21 - repository scan detects provider dependency and MCP server
   ---
-  duration_ms: 9.2632
+  duration_ms: 10.0523
   type: 'test'
   ...
 # Subtest: repository scan explicitly avoids reading env values
 ok 22 - repository scan explicitly avoids reading env values
   ---
-  duration_ms: 7.0639
+  duration_ms: 8.3589
   type: 'test'
   ...
 # Subtest: markdown and HTML reports contain disclaimer
 ok 23 - markdown and HTML reports contain disclaimer
   ---
-  duration_ms: 29.1357
+  duration_ms: 41.2731
   type: 'test'
   ...
 # Subtest: writes three report formats
 ok 24 - writes three report formats
   ---
-  duration_ms: 39.8353
+  duration_ms: 59.5068
   type: 'test'
   ...
 # Subtest: unknown system lookup fails clearly
 ok 25 - unknown system lookup fails clearly
   ---
-  duration_ms: 21.7005
+  duration_ms: 21.6788
   type: 'test'
   ...
 # Subtest: evidence rejects symlinked paths that resolve outside workspace
 ok 26 - evidence rejects symlinked paths that resolve outside workspace
   ---
-  duration_ms: 44.8513
+  duration_ms: 61.4157
   type: 'test'
   ...
 # Subtest: evidence enforces maximum size
 ok 27 - evidence enforces maximum size
   ---
-  duration_ms: 56.8159
+  duration_ms: 61.7616
   type: 'test'
   ...
 # Subtest: HTML report escapes untrusted system names
 ok 28 - HTML report escapes untrusted system names
   ---
-  duration_ms: 26.4489
+  duration_ms: 43.9056
   type: 'test'
   ...
 # Subtest: package dependency URL credentials are redacted
 ok 29 - package dependency URL credentials are redacted
   ---
-  duration_ms: 9.8973
+  duration_ms: 16.5184
   type: 'test'
   ...
 # Subtest: Python dependency URL credentials are not copied to discovery result
 ok 30 - Python dependency URL credentials are not copied to discovery result
   ---
-  duration_ms: 10.2031
+  duration_ms: 17.1446
   type: 'test'
   ...
 # Subtest: registration requires explicit model and tool declarations
 ok 31 - registration requires explicit model and tool declarations
   ---
-  duration_ms: 13.7844
+  duration_ms: 23.7959
   type: 'test'
   ...
 # Subtest: repository scan skips manifest symlinks outside repository
 ok 32 - repository scan skips manifest symlinks outside repository
   ---
-  duration_ms: 5.932
+  duration_ms: 8.5411
   type: 'test'
   ...
 # Subtest: repository scan skips oversized manifests
 ok 33 - repository scan skips oversized manifests
   ---
-  duration_ms: 13.3837
+  duration_ms: 21.4841
   type: 'test'
   ...
 # Subtest: Markdown report escapes link and formatting injection
 ok 34 - Markdown report escapes link and formatting injection
   ---
-  duration_ms: 22.2553
+  duration_ms: 44.024
   type: 'test'
   ...
 # Subtest: version is consistent across package.json, code and plugin manifest
 ok 35 - version is consistent across package.json, code and plugin manifest
   ---
-  duration_ms: 6.9729
+  duration_ms: 7.4298
   type: 'test'
   ...
 # Subtest: every rule returns pass, fail, unknown or not-applicable with a reason
 ok 36 - every rule returns pass, fail, unknown or not-applicable with a reason
   ---
-  duration_ms: 3.1647
+  duration_ms: 5.0445
   type: 'test'
   ...
 # Subtest: empty system fails or unknowns, never passes accountability or checkpoints
 ok 37 - empty system fails or unknowns, never passes accountability or checkpoints
   ---
-  duration_ms: 0.4141
+  duration_ms: 0.7382
   type: 'test'
   ...
 # Subtest: GOV-004: verified control needs resolvable evidence and a named verifier
 ok 38 - GOV-004: verified control needs resolvable evidence and a named verifier
   ---
-  duration_ms: 0.8605
+  duration_ms: 1.017
   type: 'test'
   ...
 # Subtest: GOV-004: expired evidence is unknown, not pass
 ok 39 - GOV-004: expired evidence is unknown, not pass
   ---
-  duration_ms: 0.3839
+  duration_ms: 0.4204
   type: 'test'
   ...
 # Subtest: GOV-005 fails when raw data is flagged attached
 ok 40 - GOV-005 fails when raw data is flagged attached
   ---
-  duration_ms: 0.4084
+  duration_ms: 0.7563
   type: 'test'
   ...
 # Subtest: GOV-009 fails for a tool without permissions
 ok 41 - GOV-009 fails for a tool without permissions
   ---
-  duration_ms: 0.3422
+  duration_ms: 0.532
   type: 'test'
   ...
 # Subtest: GOV-010 fails when an active system review date has passed
 ok 42 - GOV-010 fails when an active system review date has passed
   ---
-  duration_ms: 0.4435
+  duration_ms: 0.7814
   type: 'test'
   ...
 # Subtest: exceptions: active human approval gives exception-approved; agent, expired and incomplete do not
 ok 43 - exceptions: active human approval gives exception-approved; agent, expired and incomplete do not
   ---
-  duration_ms: 1.0158
+  duration_ms: 1.2599
   type: 'test'
   ...
 # Subtest: control status vocabulary is enforced
 ok 44 - control status vocabulary is enforced
   ---
-  duration_ms: 2.8541
+  duration_ms: 2.6264
   type: 'test'
   ...
 # Subtest: validation rejects out-of-range and mistyped risk fields
 ok 45 - validation rejects out-of-range and mistyped risk fields
   ---
-  duration_ms: 0.6697
+  duration_ms: 0.9922
   type: 'test'
   ...
 # Subtest: risk sensitivity brackets the score for every factor
 ok 46 - risk sensitivity brackets the score for every factor
   ---
-  duration_ms: 0.8656
+  duration_ms: 0.6967
   type: 'test'
   ...
 # Subtest: assessment contains rules, evidence digests, unknowns, limitations and never approves
 ok 47 - assessment contains rules, evidence digests, unknowns, limitations and never approves
   ---
-  duration_ms: 62.4154
+  duration_ms: 83.5249
   type: 'test'
   ...
 # Subtest: evidence verify detects changed, missing and expired files
 ok 48 - evidence verify detects changed, missing and expired files
   ---
-  duration_ms: 104.538
+  duration_ms: 165.4942
   type: 'test'
   ...
 # Subtest: evidence cannot be the governance workspace itself or a key file
 ok 49 - evidence cannot be the governance workspace itself or a key file
   ---
-  duration_ms: 46.6598
+  duration_ms: 76.4428
   type: 'test'
   ...
 # Subtest: evidence for an unknown system is refused before any file is read
 ok 50 - evidence for an unknown system is refused before any file is read
   ---
-  duration_ms: 28.1553
+  duration_ms: 35.4632
   type: 'test'
   ...
 # Subtest: audit log records registration, evidence and report events and stays valid
 ok 51 - audit log records registration, evidence and report events and stays valid
   ---
-  duration_ms: 48.6138
+  duration_ms: 81.716
   type: 'test'
   ...
 # Subtest: lockfile v3 and v1 formats give exact resolved versions with pointers and digests
 ok 52 - lockfile v3 and v1 formats give exact resolved versions with pointers and digests
   ---
-  duration_ms: 19.5571
+  duration_ms: 42.7454
   type: 'test'
   ...
 # Subtest: poetry.lock and requirements pins are parsed
 ok 53 - poetry.lock and requirements pins are parsed
   ---
-  duration_ms: 14.7715
+  duration_ms: 50.1613
   type: 'test'
   ...
 # Subtest: package.json candidates carry a JSON pointer and line
 ok 54 - package.json candidates carry a JSON pointer and line
   ---
-  duration_ms: 6.2185
+  duration_ms: 10.1275
   type: 'test'
   ...
 # Subtest: malformed manifests and lockfiles never throw
 ok 55 - malformed manifests and lockfiles never throw
   ---
-  duration_ms: 23.9872
+  duration_ms: 35.0676
   type: 'test'
   ...
 # Subtest: MCP remote URLs are not copied into scan results
 ok 56 - MCP remote URLs are not copied into scan results
   ---
-  duration_ms: 11.5677
+  duration_ms: 12.6521
   type: 'test'
   ...
 # Subtest: manifest loader verifies digests and rejects tampered or invalid manifests
 ok 57 - manifest loader verifies digests and rejects tampered or invalid manifests
   ---
-  duration_ms: 11.6497
+  duration_ms: 18.7968
   type: 'test'
   ...
 # Subtest: manifest files that are huge are skipped, not read
 ok 58 - manifest files that are huge are skipped, not read
   ---
-  duration_ms: 11.8617
+  duration_ms: 21.3429
   type: 'test'
   ...
 # Subtest: importManifests registers valid manifests as unconfirmed repository declarations
 ok 59 - importManifests registers valid manifests as unconfirmed repository declarations
   ---
-  duration_ms: 46.1032
+  duration_ms: 64.0078
   type: 'test'
   ...
 # Subtest: diff flags model, tool, data, owner and intended-use changes with re-review triggers
 ok 60 - diff flags model, tool, data, owner and intended-use changes with re-review triggers
   ---
-  duration_ms: 1.5128
+  duration_ms: 1.57
   type: 'test'
   ...
 # Subtest: diff reports changed fields for a tool permission change
 ok 61 - diff reports changed fields for a tool permission change
   ---
-  duration_ms: 0.4817
+  duration_ms: 0.5362
   type: 'test'
   ...
 # Subtest: scan diff detects added, changed and removed candidates; mixed kinds are refused
 ok 62 - scan diff detects added, changed and removed candidates; mixed kinds are refused
   ---
-  duration_ms: 0.747
+  duration_ms: 0.6183
   type: 'test'
   ...
 # Subtest: seal detects edits and canonical form ignores key order
 ok 63 - seal detects edits and canonical form ignores key order
   ---
-  duration_ms: 0.4157
+  duration_ms: 0.3273
   type: 'test'
   ...
 # Subtest: isInside is separator-safe
 ok 64 - isInside is separator-safe
   ---
-  duration_ms: 0.3111
+  duration_ms: 0.2099
   type: 'test'
   ...
 # Subtest: independent audit runs, passes, seals and renders MD and HTML
 ok 65 - independent audit runs, passes, seals and renders MD and HTML
   ---
-  duration_ms: 2853.0739
+  duration_ms: 5041.2132
   type: 'test'
   ...
 # Subtest: audit report seal breaks when a check result is edited
 ok 66 - audit report seal breaks when a check result is edited
   ---
-  duration_ms: 2832.0011
+  duration_ms: 5312.7429
   type: 'test'
   ...
 # Subtest: installHost: dry-run writes nothing, bad hosts refused, all 9 hosts install
 ok 67 - installHost: dry-run writes nothing, bad hosts refused, all 9 hosts install
   ---
-  duration_ms: 4231.2018
+  duration_ms: 6307.8936
   type: 'test'
   ...
 # Subtest: installHost refusal leaves no partial install
 ok 68 - installHost refusal leaves no partial install
   ---
-  duration_ms: 23.6639
+  duration_ms: 35.0712
   type: 'test'
   ...
 # Subtest: CLI: version, help, strict option parsing
 ok 69 - CLI: version, help, strict option parsing
   ---
-  duration_ms: 4154.0183
+  duration_ms: 10205.2397
   type: 'test'
   ...
 # Subtest: CLI works from any directory (package-root resolution)
 ok 70 - CLI works from any directory (package-root resolution)
   ---
-  duration_ms: 2029.3275
+  duration_ms: 3300.8677
   type: 'test'
   ...
 # Subtest: CLI end to end: register, assess in 3 formats, evidence, report, diff, audit verify
 ok 71 - CLI end to end: register, assess in 3 formats, evidence, report, diff, audit verify
   ---
-  duration_ms: 16357.742
+  duration_ms: 19502.5633
   type: 'test'
   ...
 # Subtest: CLI audit writes three files, refuses overwrite without --force, and verify checks the seal
 ok 72 - CLI audit writes three files, refuses overwrite without --force, and verify checks the seal
   ---
-  duration_ms: 11718.1719
+  duration_ms: 28728.9492
   type: 'test'
   ...
 # Subtest: CLI import-manifests and scan on the fixture repository
 ok 73 - CLI import-manifests and scan on the fixture repository
   ---
-  duration_ms: 2610.1216
+  duration_ms: 4783.1728
   type: 'test'
   ...
 # Subtest: CLI serve refuses a missing or short token
 ok 74 - CLI serve refuses a missing or short token
   ---
-  duration_ms: 2093.5108
+  duration_ms: 2215.9853
   type: 'test'
   ...
 # Subtest: reports escape every untrusted field (rule reasons, tool names, data sources)
 ok 75 - reports escape every untrusted field (rule reasons, tool names, data sources)
   ---
-  duration_ms: 33.6748
+  duration_ms: 164.3904
   type: 'test'
   ...
 # Subtest: every skill has valid frontmatter and concrete tool support; every agent has a mirrored host file
 ok 76 - every skill has valid frontmatter and concrete tool support; every agent has a mirrored host file
   ---
-  duration_ms: 20.1716
+  duration_ms: 215.6172
   type: 'test'
   ...
 # Subtest: system schema covers exceptions with a human-only approver and the control status vocabulary
 ok 77 - system schema covers exceptions with a human-only approver and the control status vocabulary
   ---
-  duration_ms: 1.1543
+  duration_ms: 1.2799
   type: 'test'
   ...
 # Subtest: server health requires bearer token
 ok 78 - server health requires bearer token
   ---
-  duration_ms: 57.9115
+  duration_ms: 62.6605
   type: 'test'
   ...
 # Subtest: server exposes read-only system assessment
 ok 79 - server exposes read-only system assessment
   ---
-  duration_ms: 16.0277
+  duration_ms: 17.0664
   type: 'test'
   ...
 # Subtest: server rejects writes and origins
 ok 80 - server rejects writes and origins
   ---
-  duration_ms: 6.1683
+  duration_ms: 7.6019
   type: 'test'
   ...
 1..80
@@ -487,4 +487,4 @@ ok 80 - server rejects writes and origins
 # cancelled 0
 # skipped 0
 # todo 0
-# duration_ms 51143.4781
+# duration_ms 88374.8059
